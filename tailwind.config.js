@@ -19,19 +19,22 @@ module.exports = {
       sans: ["Inter", "sans-serif"],
     },
     fontSize: {
-      base: '1rem',
+      base: "1rem",
 
-      detail: '22px',
-      aroundXl: '40px',
-      xl: '60px',
+      detail: "22px",
+      aroundXl: "40px",
+      xl: "60px",
 
-      fontHeaderLogo: '32px',
-      fontHeader: '20px',
+      fontHeader: "20px",
+      fontHeaderLogo: "32px",
 
-      link: '30px',
+      link: "30px",
     },
-    extend: {},
+    extend: {
+      padding: {
+        spacing: "10%",
+      },
+    },
   },
   plugins: [],
-}
-
+};

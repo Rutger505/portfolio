@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  header h1 {
+    @apply font-bold text-fontHeaderLogo text-header;
+  }
+
+  header a {
+    @apply text-header text-fontHeader;
+  }
+
   body {
     @apply bg-primary;
   }
 
   h1 {
-    @apply text-text text-xl font-bold;
+    @apply text-xl font-bold text-text;
   }
 
   h2 {
@@ -21,13 +29,5 @@
 
   p {
     @apply text-detail;
-  }
-
-  header h1,  {
-    @apply text-fontHeaderLogo text-header font-bold;
-  }
-  
-  header a,  {
-    @apply text-fontHeader text-header;
   }
 }

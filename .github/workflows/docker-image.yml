@@ -2,17 +2,12 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - "main"
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
-    env:
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     steps:
     - uses: actions/checkout@v3
@@ -20,10 +15,7 @@ jobs:
       run: docker build . --tag rutger505/portofolio
 
     - name: Login Docker Hub
-      run: echo $DOCKERHUB_PASSWORD | docker login --username $DOCKERHUB_USERNAME --password-stdin
+      run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
     - name: Push Docker image
       run: docker push rutger505/portofolio
-      
-    - name: Logout
-      run: docker logout

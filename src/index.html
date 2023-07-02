@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rutger Pronk</title>
-</head>
-<body>
-    <h1>Hi, I'm Rutger.</h1>
-    <h1>This site is under construction!</h1>
-    <h1>20-7-2023.</h1>
-</body>
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body class="flex items-center justify-center w-screen h-screen">
+    <main
+      class="flex flex-col w-[95%] p-5 sm:w-fit sm:p-16 rounded-lg  md:p-16 lg:p-16 bg-secondary justify-center items-center"
+    >
+      <h1 class="text-center">Coming soon.</h1>
+      <p class="text-center">My website is under construction.</p>
+
+      <div
+        class="flex flex-col flex-wrap items-center mx-8 mt-32 mb-8 gap-x-3 lg:flex-row"
+      >
+        <div class="flex gap-x-2">
+          <h2 id="days">30</h2>
+          <h2>days</h2>
+        </div>
+        <h2 class="hidden lg:block">:</h2>
+        <div class="flex gap-x-2">
+          <h2 id="hours">9</h2>
+
+          <h2>Hours</h2>
+        </div>
+        <h2 class="hidden lg:block">:</h2>
+        <div class="flex gap-x-2">
+          <h2 id="minutes">44</h2>
+          <h2>Minutes</h2>
+        </div>
+        <h2 class="hidden lg:block">:</h2>
+        <div class="flex gap-x-2">
+          <h2 id="seconds">19</h2>
+          <h2>Seconds</h2>
+        </div>
+       </div>
+      <script src="scripts/timer.js"></script>
+    </main>
+  </body>
 </html>

@@ -593,6 +593,10 @@ header a, {
   height: 100vh;
 }
 
+.w-\[1\.15em\] {
+  width: 1.15em;
+}
+
 .w-\[95\%\] {
   width: 95%;
 }

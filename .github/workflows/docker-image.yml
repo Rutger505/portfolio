@@ -16,7 +16,8 @@ jobs:
       run: docker build . --tag rutger505/portofolio
 
     - name: Login Docker Hub
-      run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      #run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      run:  docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push Docker image
       run: docker push rutger505/portofolio

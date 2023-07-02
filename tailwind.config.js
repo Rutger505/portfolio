@@ -7,9 +7,9 @@ module.exports = {
       primary: "#242734",
       secondary: "#1E212E",
       accent: "#FF4A57",
-      textPrimary: "#EDEDED",
-      textSecondary: "#EFEDFDB5",
-      textHeader: "#EDEDED",
+      text: "#EDEDED",
+      detail: "#EFEDFDB5",
+      header: "#EDEDED",
 
       red: "#FF0000",
       green: "#00FF00",
@@ -17,6 +17,18 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
+    },
+    fontSize: {
+      base: '1rem',
+
+      detail: '22px',
+      aroundXl: '40px',
+      xl: '60px',
+
+      fontHeaderLogo: '32px',
+      fontHeader: '20px',
+
+      link: '30px',
     },
     extend: {},
   },

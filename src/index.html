@@ -12,14 +12,35 @@
 <body>
 	<main id="home" class="flex flex-col h-screen px-spacing">
 		<header class="flex items-center justify-between h-24">
-			<a class="p-2" href="#home">
+			<a class="p-2 duration-150 hover:opacity-70" href="#home">
 				<h1><span class="text-accent">R</span>utger.</h1>
 			</a>
 			<nav>
 				<ul class="flex gap-x-5">
-					<li><a class="p-2" href="#about-me">About me</a></li>
-					<li><a class="p-2" href="#my-work">My work</a></li>
-					<li><a class="p-2" href="#contact">Contact</a></li>
+					<li>
+						<a class="flex flex-col items-center p-2 group" href="#about-me">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80">
+								About me
+								<span class="block w-full translate-x-[-101%] group-hover:translate-x-[-60%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col items-center p-2 group" href="#my-work">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80">
+								My work
+								<span class="block w-full translate-x-[-101%] group-hover:translate-x-[-60%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a class="flex flex-col items-center p-2 group" href="#contact">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80">
+								Contact
+								<span class="block w-full translate-x-[-101%] group-hover:translate-x-[-60%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</header>

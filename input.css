@@ -7,7 +7,8 @@
     @apply font-bold text-fontHeaderLogo text-header;
   }
 
-  header a {
+  header a,
+  header p {
     @apply text-header text-fontHeader;
   }
 
@@ -33,20 +34,22 @@
   }
 }
 
-@keyframes arrow-animation {
-  0% {
-    transform: translateY(0);
+@layer components {
+  @keyframes arrow-animation {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
-  50% {
-    transform: translateY(-10px);
+  #scroll-arrow {
+    animation: arrow-animation 3s infinite;
   }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-#scroll-arrow {
-  animation: arrow-animation 3s infinite;
 }

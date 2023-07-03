@@ -28,6 +28,8 @@ module.exports = {
       fontHeader: "20px",
       fontHeaderLogo: "32px",
 
+      arrow: "45px",
+
       link: "30px",
     },
     extend: {

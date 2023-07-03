@@ -10,34 +10,48 @@
 </head>
 
 <body>
-	<header class="flex items-center justify-between h-24 px-spacing">
-		<a class="p-2" href="#home">
-			<h1><span class="text-accent">R</span>utger.</h1>
-		</a>
-		<nav>
-			<ul class="flex gap-x-5">
-				<li><a class="p-2" href="#about-me">About me</a></li>
-				<li><a class="p-2" href="#my-work">My work</a></li>
-				<li><a class="p-2" href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main id="home" class="h-screen px-spacing">
-		<h2>&lt;/&gt; Software-Dev</h2>
+	<main id="home" class="flex flex-col h-screen px-spacing">
+		<header class="flex items-center justify-between h-24">
+			<a class="p-2" href="#home">
+				<h1><span class="text-accent">R</span>utger.</h1>
+			</a>
+			<nav>
+				<ul class="flex gap-x-5">
+					<li><a class="p-2" href="#about-me">About me</a></li>
+					<li><a class="p-2" href="#my-work">My work</a></li>
+					<li><a class="p-2" href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h2 class="mt-60">&lt;/&gt; Software-Dev</h2>
 		<h1>Hi, I'm <span class="text-accent">Rutger</span> from the <br> Netherlands</h1>
 
-		<a href="#my-work">
+		<a class="flex items-center mt-36 gap-x-2" href="#my-work">
 			Explore my projects
-			<span class="material-symbols-outlined text-accent">
+			<span class="!text-arrow material-symbols-outlined text-accent">
 				arrow_downward
 			</span>
 		</a>
+
+		<div class="flex-1"></div>
+
+		<div id="scroll-arrow" class="flex justify-center mb-5">
+			<span class="!text-arrow m-auto material-symbols-outlined text-accent">
+				arrow_downward
+			</span>
+		</div>
+
 	</main>
-	<section id="about-me">
-		<p>Hi im Rutger</p>
+	<section id="about-me" class="py-20 px-spacing bg-secondary">
+		<h1>Hi im Rutger</h1>
 	</section>
-	<section id="my-work"></section>
-	<section id="contact"></section>
+	<section id="my-work" class="px-spacing">
+		<h1>What can I do?</h1>
+	</section>
+	<section id="contact" class="px-spacing">
+		<h1>Get in touch</h1>
+	</section>
 	<footer></footer>
 </body>
 

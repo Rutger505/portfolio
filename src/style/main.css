@@ -453,7 +453,8 @@ h2 {
   color: rgb(237 237 237 / var(--tw-text-opacity));
 }
 
-a {
+a,
+  a span {
   font-size: 30px;
   --tw-text-opacity: 1;
   color: rgb(237 237 237 / var(--tw-text-opacity));
@@ -564,6 +565,22 @@ p {
   --tw-backdrop-sepia:  ;
 }
 
+.m-auto {
+  margin: auto;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mt-60 {
+  margin-top: 15rem;
+}
+
 .flex {
   display: flex;
 }
@@ -576,17 +593,39 @@ p {
   height: 100vh;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 33 46 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -598,7 +637,34 @@ p {
   padding-right: 10%;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.\!text-arrow {
+  font-size: 45px !important;
+}
+
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(255 74 87 / var(--tw-text-opacity));
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#scroll-arrow {
+  animation: arrow-animation 3s infinite;
 }

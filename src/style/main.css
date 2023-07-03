@@ -609,10 +609,6 @@ p {
   position: fixed;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -635,6 +631,10 @@ p {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mt-36 {

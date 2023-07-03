@@ -3,7 +3,6 @@ let prevScrollPos = window.pageYOffset;
 window.addEventListener('scroll', () => {
     const currentScrollPos = window.pageYOffset;
     const header = document.querySelector('header');
-    console.log(header);
 
 
     if (prevScrollPos > currentScrollPos) {

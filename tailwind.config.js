@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit", // just in time compiler faster build times
-  content: ["./src/*.{html,js}"],
+  content: [
+    "./src/*.{html,js}",
+    "./src/**/*.{html,js}"
+  ],
   theme: {
     colors: {
       primary: "#242734",

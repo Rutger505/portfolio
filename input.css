@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+
+  /* font and color */
   header h1 {
     @apply font-bold text-fontHeaderLogo text-header;
   }
@@ -33,6 +35,7 @@
     @apply text-detail;
   }
 
+  /* scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
   }

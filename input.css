@@ -69,7 +69,7 @@
     }
   }
 
-  #scroll-arrow {
+  .scroll-arrow {
     animation: arrow-animation 3s infinite;
   }
 }

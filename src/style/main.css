@@ -613,40 +613,60 @@ p {
   top: 0px;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .mt-36 {
   margin-top: 9rem;
 }
 
+.mt-48 {
+  margin-top: 12rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-80 {
   margin-top: 20rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-20 {
   margin-top: 5rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-56 {
-  margin-top: 14rem;
-}
-
-.mt-48 {
-  margin-top: 12rem;
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -655,10 +675,6 @@ p {
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -673,6 +689,10 @@ p {
   height: 6rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
 .h-\[3px\] {
   height: 3px;
 }
@@ -681,21 +701,37 @@ p {
   height: 500px;
 }
 
+.h-\[572px\] {
+  height: 572px;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .w-\[80\%\] {
   width: 80%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
+.w-\[572px\] {
+  width: 572px;
 }
 
 .flex-1 {
@@ -728,9 +764,29 @@ p {
   justify-content: space-between;
 }
 
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
 .gap-x-7 {
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
+}
+
+.gap-x-28 {
+  -moz-column-gap: 7rem;
+       column-gap: 7rem;
+}
+
+.gap-x-9 {
+  -moz-column-gap: 2.25rem;
+       column-gap: 2.25rem;
+}
+
+.gap-x-24 {
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
 }
 
 .overflow-hidden {
@@ -765,8 +821,22 @@ p {
   padding-bottom: 5rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .text-aroundXl {
   font-size: 40px;
+}
+
+.text-detail {
+  font-size: 20px;
 }
 
 .leading-tight {
@@ -786,6 +856,10 @@ p {
 .text-text {
   --tw-text-opacity: 1;
   color: rgb(237 237 237 / var(--tw-text-opacity));
+}
+
+.text-detail {
+  color: #EFEDFDB5;
 }
 
 .underline {

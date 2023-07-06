@@ -10,6 +10,7 @@
 	<script src="scripts/smoothNavigation.js" defer></script>
 	<script src="scripts/compactHeader.js" defer></script>
 	<script src="scripts/underlineHeader.js" defer></script>
+	<script src="scripts/copyEmail.js" defer></script>
 	<!-- document icons -->
 	<link rel="icon" href="img/website-icon.svg" type="image/svg+xml">
 	<link rel="icon" href="img/website-icon.png" type="image/png">
@@ -115,9 +116,16 @@
 	<section id="contact" class="py-32 mx-spacing">
 		<h1>Talk to me</h1>
 		<div class="flex justify-between">
-			<p>Do not hesitate to contact me through the form here or by direct email on rutger.pronk19@gmail.com.</p>
+			<div class="flex items-start ">
+				<p>Do not hesitate to contact me through the form here or by direct email on&nbsp;</p>
+				<span id="copy-email" class="relative flex items-start justify-center underline cursor-pointer text-detail">
+					rutger.pronk19@gmail.com
+					<div id="copy-mail-succes" class="absolute hidden p-2 rounded -top-14 text-text bg-secondary">Email copied!</div>
+				</span>
+				<p>.</p>
+			</div>
 
-			<div class="flex flex-col items-start rounded-lg p-7 bg-secondary">
+			<div class="flex flex-col rounded-lg p-7 bg-secondary">
 				<h2>Send me a message</h2>
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Name">
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Email">
@@ -128,6 +136,9 @@
 			</div>
 		</div>
 	</section>
+
+
+
 	<footer class="flex items-center justify-center w-full py-12 bg-secondary gap-x-20">
 		<div class="flex gap-x-8">
 			<a href="https://github.com/Rutger505" target="_blank">

@@ -27,7 +27,6 @@ const hideUnderlines = (underlines) => {
 };
 
 const showUnderline = (underline) => {
-    console.log(underline.classList);
     underline.classList.add(showUnderlineClass);
     underline.classList.remove(hoverUnderlineClass);
     underline.classList.remove(hideUnderlineClass);

@@ -52,6 +52,10 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #0e1018bb;
   }
+
+  .bg-none {
+    background-color: transparent;
+  }
 }
 
 @layer components {
@@ -71,5 +75,9 @@
 
   .scroll-arrow {
     animation: arrow-animation 3s infinite;
+  }
+
+  .button {
+    @apply relative z-10 px-3 py-1 overflow-hidden duration-300 border rounded bg-none border-accent text-detail hover:text-text before:duration-300 before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-accent before:-z-10 before:hover:w-full;
   }
 }

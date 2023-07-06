@@ -39,6 +39,9 @@ module.exports = {
       padding: {
         spacing: "10%",
       },
+      margin: {
+        spacing: "10%",
+      },
     },
   },
   plugins: [],

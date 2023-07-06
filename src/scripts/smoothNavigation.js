@@ -31,7 +31,7 @@ const clickEvent = (event, link) => {
 };
 
 
-const anchorLinks = document.querySelectorAll('.navigation-button');
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
 anchorLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
         clickEvent(event, link);

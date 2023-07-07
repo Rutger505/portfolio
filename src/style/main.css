@@ -451,7 +451,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 38px;
   --tw-text-opacity: 1;
   color: rgb(237 237 237 / var(--tw-text-opacity));
 }
@@ -716,8 +716,12 @@ p {
   margin-top: 20rem;
 }
 
-.mt-auto {
-  margin-top: auto;
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -797,6 +801,14 @@ p {
   max-width: 710px;
 }
 
+.max-w-\[450px\] {
+  max-width: 450px;
+}
+
+.max-w-\[430px\] {
+  max-width: 430px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -864,10 +876,6 @@ p {
   row-gap: 2rem;
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -898,8 +906,7 @@ p {
 }
 
 .bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 33 46 / var(--tw-bg-opacity));
+  background-color: #1E212E80;
 }
 
 .bg-none {
@@ -943,16 +950,51 @@ p {
   padding-bottom: 3%;
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 
 .text-aroundXl {
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .text-detail {
   font-size: 20px;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .leading-tight {

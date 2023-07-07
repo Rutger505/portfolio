@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     colors: {
       primary: "#242734",
-      secondary: "#1E212E",
+      secondary: "#1E212E80",
       accent: "#FF4A57",
       text: "#EDEDED",
       detail: "#EFEDFDB5",
@@ -25,7 +25,7 @@ module.exports = {
       base: "1rem",
 
       detail: "20px",
-      aroundXl: "40px",
+      aroundXl: "38px",
       xl: "60px",
 
       fontHeader: "20px",

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: "jit", // just in time compiler faster build times
+  // mode: "jit", // just in time compiler faster build times ## maybe bug crash fix
   content: [
     "./src/*.{html,js}",
     "./src/**/*.{html,js}"
@@ -13,6 +13,8 @@ module.exports = {
       text: "#EDEDED",
       detail: "#EFEDFDB5",
       header: "#EDEDED",
+
+      transparent: "transparent",
 
       red: "#FF0000",
       green: "#00FF00",

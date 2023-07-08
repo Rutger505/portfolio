@@ -12,6 +12,7 @@
 	<script src="scripts/underlineHeader.js" defer></script>
 	<script src="scripts/copyEmail.js" defer></script>
 	<script src="scripts/backgroundBlur.js" defer></script>
+	<script src="scripts/toTopButton.js" defer></script>
 	<script src="scripts/experienceElement.js"></script>
 	<!-- document icons -->
 	<link rel="icon" href="img/website-icon.svg" type="image/svg+xml">
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 mx-spacing">
+	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 transition-all mx-spacing">
 		<a class="p-2 duration-150 hover:opacity-70" href="#home">
 			<h1><span class="text-accent">R</span>utger</h1>
 		</a>
@@ -61,6 +62,12 @@
 			</ul>
 		</nav>
 	</header>
+
+	<div id="background-blur" class="absolute top-0 left-0 overflow-hidden bg-center bg-no-repeat bg-cover bg-blur blur-background -z-10"></div>
+
+	<a id="to-top-button" class="fixed flex items-center justify-center w-12 h-12 duration-300 rounded-full opacity-0 bottom-5 right-5 bg-secondary" href="#home">
+		<img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up">
+	</a>
 
 	<main id="home" class="flex flex-col min-h-screen mx-spacing">
 		<h2 class="text-aroundXl text-text mt-80">&lt;/&gt; Software-Dev</h2>
@@ -222,7 +229,6 @@
 		</div>
 	</section>
 
-	<div id="background-blur" class="absolute top-0 left-0 overflow-hidden bg-center bg-no-repeat bg-cover bg-blur blur-background -z-10"></div>
 
 	<footer class="flex items-center justify-center w-full py-12 bg-secondary gap-x-20 ">
 		<div class="flex gap-x-8">

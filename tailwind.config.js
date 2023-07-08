@@ -44,6 +44,9 @@ module.exports = {
       margin: {
         spacing: "10%",
       },
+      backgroundImage: {
+        blur: "url('../img/background-blur.svg')",
+      },
     },
   },
   plugins: [],

@@ -82,7 +82,6 @@ class experienceElement extends HTMLElement {
 
         if (elementCount !== 1) {
             const oldLineElement = document.querySelector(`#experience-line-${elementCount - 1}`);
-            console.log(oldLineElement);
             oldLineElement.classList.remove("rounded-b-full");
         }
     }

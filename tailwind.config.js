@@ -47,6 +47,9 @@ module.exports = {
       backgroundImage: {
         blur: "url('../img/background-blur.svg')",
       },
+      blur: {
+        background: "200px",
+      },
     },
   },
   plugins: [],

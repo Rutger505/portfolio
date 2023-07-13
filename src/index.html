@@ -19,7 +19,7 @@
 	<link rel="icon" href="img/website-icon.png" type="image/png">
 </head>
 
-<body>
+<body class="">
 	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 transition-all mx-spacing">
 		<a class="p-2 duration-150 hover:opacity-70" href="#home">
 			<h1><span class="text-accent">R</span>utger</h1>
@@ -63,7 +63,7 @@
 		</nav>
 	</header>
 
-	<div id="background-blur" class="absolute top-0 left-0 overflow-hidden bg-center bg-no-repeat bg-cover bg-blur blur-background -z-10"></div>
+	<div id="background-blur" class="absolute top-0 left-0 w-full overflow-hidden bg-center bg-no-repeat bg-cover bg-blur blur-background -z-10"></div>
 
 	<a id="to-top-button" class="fixed flex items-center justify-center w-12 h-12 duration-300 rounded-full opacity-0 bottom-5 right-5 bg-secondary" href="#home">
 		<img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up">
@@ -207,14 +207,16 @@
 
 	<section id="contact" class="py-32 rounded-t mx-spacing">
 		<h1>Talk to me</h1>
-		<div class="flex justify-between">
-			<div class="flex items-start ">
-				<p>Do not hesitate to contact me through the form here or by direct email on&nbsp;</p>
-				<span id="copy-email" class="relative flex items-start justify-center underline cursor-pointer text-detail">
-					rutger.pronk19@gmail.com
-					<div id="copy-mail-succes" class="absolute hidden p-2 rounded -top-14 text-text bg-secondary">Email copied!</div>
-				</span>
-				<p>.</p>
+		<div class="flex items-start justify-between">
+			<div class="flex flex-wrap items-start justify-start gap-0">
+				<p>
+					Do not hesitate to contact me through the form here or by direct email on
+					<button id="copy-email" class="relative inline underline cursor-pointer text-detail">
+						rutger.pronk19@gmail.com
+						<div id="copy-mail-succes" class="absolute hidden p-2 m-auto rounded -top-14 text-text bg-secondary left-10">Email copied!</div>
+					</button>
+					<span class="ml-[-0.3em]">.</span>
+				</p>
 			</div>
 
 			<div class="flex flex-col rounded-lg p-7 bg-secondary">
@@ -223,7 +225,7 @@
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Email">
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Subject">
 				<textarea class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text min-h-[120px]" type="text" placeholder="Message"></textarea>
-				<button class="mt-10 button">Send email</button>
+				<button id="form-button" class="mt-10 button">Send email</button>
 				<p class="mt-3 text-red">Still in construction</p>
 			</div>
 		</div>

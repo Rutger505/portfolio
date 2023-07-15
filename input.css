@@ -56,6 +56,14 @@
   .bg-none {
     background-color: transparent;
   }
+  
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-1000 blur -translate-x-full
+  }
+
+  .animate {
+    @apply opacity-100 translate-x-0 blur-0
+  }
 }
 
 @layer components {

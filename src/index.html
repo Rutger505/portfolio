@@ -13,6 +13,7 @@
 	<script src="scripts/copyEmail.js" defer></script>
 	<script src="scripts/backgroundBlur.js" defer></script>
 	<script src="scripts/toTopButton.js" defer></script>
+	<script src="scripts/animateOnScroll.js" defer></script>
 	<script src="scripts/experienceElement.js"></script>
 	<!-- document icons -->
 	<link rel="icon" href="img/website-icon.svg" type="image/svg+xml">
@@ -20,7 +21,8 @@
 </head>
 
 <body class="">
-	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 transition-all mx-spacing">
+	<!-- absolute -->
+	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 transition-all mx-spacing z-50">
 		<a class="p-2 duration-150 hover:opacity-70" href="#home">
 			<h1><span class="text-accent">R</span>utger</h1>
 		</a>
@@ -69,14 +71,18 @@
 		<img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up">
 	</a>
 
+	<!-- normal -->
 	<main id="home" class="flex flex-col min-h-screen mx-spacing">
-		<h2 class="text-aroundXl text-text mt-80">&lt;/&gt; Software-Dev</h2>
-		<h1 class="leading-tight">Hi, I'm <span class="text-accent">Rutger</span> from the <br> Netherlands</h1>
+		<h2 class="delay-100 text-aroundXl text-text mt-80 animate-on-scroll">&lt;/&gt; Software-Dev</h2>
+		<h1 class="leading-tight animate-on-scroll">Hi, I'm <span class="text-accent">Rutger</span> from the <br> Netherlands</h1>
 
-		<a class="mt-48 w-fit" href="#my-work">
-			Explore my projects
-			<img class="inline-block ml-1" src="img/arrow-down-icon.svg" alt="arrow down">
-		</a>
+		<div class="mt-48 delay-500 animate-on-scroll">
+			<a class="w-fit" href="#my-work">
+				Explore my projects
+				<img class="inline-block ml-1" src="img/arrow-down-icon.svg" alt="arrow down">
+			</a>
+		</div>
+
 
 		<div class="flex-1"></div>
 
@@ -90,8 +96,8 @@
 	<section id="about-me" class="py-32 mx-spacing">
 		<h1>Who am I?</h1>
 		<div class="flex mt-10 gap-x-24">
-			<div class="flex flex-col items-center">
-				<img class="rounded-full bg-secondary h-80" src="img/personal-photo.webp" alt="personal-photo">
+			<div class="flex flex-col items-center animate-on-scroll">
+				<img class="rounded-full bg-secondary h-80 " src="img/personal-photo.webp" alt="personal-photo">
 
 				<div class="flex mt-16 gap-x-9">
 					<a href="https://github.com/Rutger505" target="_blank">
@@ -105,7 +111,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="max-w-[572px] mt-8">
+			<div class="max-w-[572px] mt-8 animate-on-scroll delay-150">
 				<p>
 					My name is Rutger Pronk, and I am currently studying
 					to become a Software Developer in the Netherlands.
@@ -123,8 +129,8 @@
 	</section>
 
 	<section id="my-work" class="py-32 mx-spacing">
-		<h1>What can I do?</h1>
-		<p class="max-w-[710px] mt-10">
+		<h1 class="animate-on-scroll">What can I do?</h1>
+		<p class="max-w-[710px] mt-10 animate-on-scroll delay-300">
 			I enjoy working with Java, C#, and web development
 			(HTML, CSS, JavaScript, PHP, SQL). I have collaborated
 			on projects, improving teamwork and communication
@@ -132,9 +138,9 @@
 			Scrum/Trello for project management. Here are some
 			notable projects showcasing my skills.
 		</p>
-		<h2 class="mt-10">My work</h2>
+		<h2 class="mt-10 animate-on-scroll">My work</h2>
 		<div class="flex flex-col mt-10 gap-y-8">
-			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between">
+			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between animate-on-scroll">
 				<div class="flex flex-col items-start">
 					<h2>Useful Autoclicker</h2>
 					<p class="max-w-[430px] mt-5">
@@ -153,7 +159,7 @@
 				</div>
 				<img class="h-full" src="img/useful-autoclicker-3.0-previeuw.webp" alt="useful autoclicker">
 			</div>
-			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between">
+			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between animate-on-scroll">
 				<div class="flex flex-col items-start">
 					<h2>Travel Agency</h2>
 					<p class="max-w-[430px] mt-5">
@@ -172,7 +178,7 @@
 				</div>
 				<img class="h-full" src="img/reisbureau.webp" alt="useful autoclicker">
 			</div>
-			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between">
+			<div class="px-20 py-10 h-[400px] rounded-lg bg-secondary flex justify-between animate-on-scroll">
 				<div class="flex flex-col items-start">
 					<h2>No Time To Die</h2>
 					<p class="max-w-[430px] mt-5">
@@ -192,9 +198,9 @@
 				<img class="h-full" src="img/no-time-to-die.webp" alt="useful autoclicker">
 			</div>
 		</div>
-		<h2 class="mt-10">My experiences</h2>
+		<h2 class="mt-10 animate-on-scroll">My experiences</h2>
 		<div class="relative flex justify-center mt-10">
-			<div class="flex flex-col items-center">
+			<div class="flex flex-col items-center delay-300 animate-on-scroll">
 				<work-experience text="I want to pursue further education after my studies." date="July 2026"></work-experience>
 				<work-experience text="I will graduate as a software developer." date="July 2026"></work-experience>
 				<work-experience text="I will intern for six months." date="January 2026"></work-experience>
@@ -205,10 +211,10 @@
 		</div>
 	</section>
 
-	<section id="contact" class="py-32 rounded-t mx-spacing">
-		<h1>Talk to me</h1>
+	<section id="contact" class="py-32 mx-spacing ">
+		<h1 class="animate-on-scroll">Talk to me</h1>
 		<div class="flex items-start justify-between">
-			<div class="flex flex-wrap items-start justify-start gap-0">
+			<div class="flex flex-wrap items-start justify-start gap-0 animate-on-scroll">
 				<p>
 					Do not hesitate to contact me through the form here or by direct email on
 					<button id="copy-email" class="relative inline underline cursor-pointer text-detail group">
@@ -219,7 +225,7 @@
 				</p>
 			</div>
 
-			<div class="flex flex-col rounded-lg p-7 bg-secondary">
+			<div class="flex flex-col delay-300 rounded-lg p-7 bg-secondary animate-on-scroll">
 				<h2>Send me a message</h2>
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Name">
 				<input class="w-full px-1 pb-2 mt-6 border-b-2 outline-none border-detail bg-none text-text" type="text" placeholder="Email">

@@ -56,14 +56,6 @@
   .bg-none {
     background-color: transparent;
   }
-  
-  .animate-on-scroll {
-    @apply opacity-0 transition-all duration-1000 blur -translate-x-full
-  }
-
-  .animate {
-    @apply opacity-100 translate-x-0 blur-0
-  }
 }
 
 @layer components {
@@ -87,5 +79,15 @@
 
   .button {
     @apply relative z-10 px-3 py-1 overflow-hidden duration-300 border rounded bg-none border-accent text-detail hover:text-text before:duration-300 before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-accent before:-z-10 before:hover:w-full;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-1000 blur -translate-x-full
+  }
+
+  .animate {
+    @apply opacity-100 translate-x-0 blur-0
   }
 }

@@ -20,6 +20,13 @@ module.exports = {
       green: "#00FF00",
       blue: "#0000FF",
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
     },

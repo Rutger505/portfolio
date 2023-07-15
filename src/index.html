@@ -14,6 +14,7 @@
 	<script src="scripts/backgroundBlur.js" defer></script>
 	<script src="scripts/toTopButton.js" defer></script>
 	<script src="scripts/animateOnScroll.js" defer></script>
+	<script src="scripts/dropdownHeader.js" defer></script>
 	<script src="scripts/experienceElement.js" async></script>
 	<!-- document icons -->
 	<link rel="icon" href="img/website-icon.svg" type="image/svg+xml">
@@ -22,42 +23,87 @@
 
 <body class="">
 	<!-- absolute -->
-	<header class="fixed top-0 flex items-center justify-between w-[80%] h-24 duration-700 transition-all mx-spacing z-50">
-		<a class="p-2 duration-150 hover:opacity-70" href="#home">
-			<h1><span class="text-accent">R</span>utger</h1>
-		</a>
-		<nav>
-			<ul class="flex gap-x-7">
+	<header class="fixed top-0 z-20 w-full h-24 transition-all duration-700 bg-secondary md:backdrop-blur md:bg-transparent">
+		<div class="flex items-center justify-between h-full px-spacing">
+			<a class="p-2 duration-150 hover:opacity-70" href="#home">
+				<h1><span class="text-accent">R</span>utger</h1>
+			</a>
+			<!-- normal nav -->
+			<nav>
+				<ul class="flex gap-x-7">
+					<li class="hidden md:block">
+						<a class="p-2 group" href="#about-me">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+								About me
+								<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li class="hidden md:block">
+						<a class="p-2 group" href="#my-work">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+								My work
+								<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li class="hidden md:block">
+						<a class="p-2 group" href="#contact">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+								Contact
+								<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li class="hidden md:block">
+						<a class="p-2 group" href="http://rutgerpronk.nl">
+							<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+								<img class="inline-block" src="img/language-icon.svg" alt="language-icon">
+								NL
+								<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
+							</p>
+						</a>
+					</li>
+					<li class="block md:hidden">
+						<button id="dropdown-button" class="flex flex-col items-center justify-center h-full cursor-pointer w-7 group gap-y-[6px]">
+							<div class="rounded-xl h-[3px] w-full transition-all duration-300 bg-header group-hover:bg-accent"></div>
+							<div class="rounded-xl h-[3px] w-full  transition-all duration-300 bg-header group-hover:bg-accent middle-bar"></div>
+							<div class="rounded-xl h-[3px] w-full transition-all duration-300 bg-header group-hover:bg-accent"></div>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- responsive nav -->
+		<nav id="responsive-nav" class="overflow-hidden transition-all duration-500 max-h-0 bg-secondary">
+			<ul class="flex flex-col items-center">
 				<li>
-					<a class="p-2 group" href="#about-me">
-						<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+					<a class="block p-4 h-fit group" href="#about-me">
+						<p class="overflow-hidden duration-300 group-focus:text-accent text-header">
 							About me
-							<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
 						</p>
 					</a>
 				</li>
 				<li>
-					<a class="p-2 group" href="#my-work">
-						<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+					<a class="block p-4 h-fit group" href="#my-work">
+						<p class="overflow-hidden duration-300 group-focus:text-accent text-header">
 							My work
-							<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
 						</p>
 					</a>
 				</li>
 				<li>
-					<a class="p-2 group" href="#contact">
-						<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+					<a class="block p-4 h-fit group" href="#contact">
+						<p class="overflow-hidden duration-300 group-focus:text-accent text-header">
 							Contact
-							<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
 						</p>
 					</a>
 				</li>
 				<li>
-					<a class="p-2 group" href="http://rutgerpronk.nl">
-						<p class="overflow-hidden duration-300 group-hover:opacity-80 text-header">
+					<a class="block p-4 h-fit group" href="http://rutgerpronk.nl">
+						<p class="overflow-hidden duration-300 group-focus:text-accent text-header">
 							<img class="inline-block" src="img/language-icon.svg" alt="language-icon">
 							NL
-							<span class="header-underline block w-full translate-x-[-101%] group-hover:translate-x-[-50%] h-[3px] rounded-full duration-300 bg-accent"></span>
 						</p>
 					</a>
 				</li>
@@ -83,6 +129,7 @@
 			</a>
 		</div>
 
+		<div class="bg-transparent"></div>
 
 		<div class="flex-1"></div>
 

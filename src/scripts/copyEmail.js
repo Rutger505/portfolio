@@ -1,20 +1,20 @@
-const copyToClipboard = (Event) => {
-    const target = Event.target;
-    const email = target.textContent;
+const copyToClipboard = () => {
+    navigator.clipboard.writeText(emailAdress);
 
-    navigator.clipboard.writeText(email);
+    emailMessage.classList.remove('opacity-0');
+    emailMessage.classList.remove('-translate-y-5');
+    emailMessage.classList.add('translate-y-0');
 
-    emailHover.classList.remove('group-hover:block');
-    emailMessage.classList.remove('hidden');
 
     setTimeout(() => {
-        emailMessage.classList.add('hidden');
-        emailHover.classList.add('group-hover:block');
+        emailMessage.classList.add('opacity-0');
+        emailMessage.classList.add('-translate-y-5');
+        emailMessage.classList.remove('translate-y-0');
     }, 1500);
 };
 
 const emailButton = document.querySelector('#copy-email');
+const emailAdress = document.querySelector('#copy-email-address').innerHTML;
 const emailMessage = document.querySelector('#copy-mail-succes');
-const emailHover = document.querySelector('#copy-mail-hover');
 
 emailButton.addEventListener('click', copyToClipboard);

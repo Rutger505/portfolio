@@ -605,10 +605,6 @@ p {
   }
 }
 
-.scroll-arrow {
-  animation: arrow-animation 3s infinite;
-}
-
 .button {
   background-color: transparent;
   position: relative;
@@ -675,24 +671,16 @@ p {
   left: 0px;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.left-3 {
-  left: 0.75rem;
-}
-
-.left-6 {
-  left: 1.5rem;
-}
-
-.left-10 {
-  left: 2.5rem;
 }
 
 .-z-10 {
@@ -719,6 +707,10 @@ p {
 
 .ml-1 {
   margin-left: 0.25rem;
+}
+
+.ml-\[-0\.3em\] {
+  margin-left: -0.3em;
 }
 
 .mr-6 {
@@ -759,14 +751,6 @@ p {
 
 .mt-80 {
   margin-top: 20rem;
-}
-
-.ml-\[-0\.5em\] {
-  margin-left: -0.5em;
-}
-
-.ml-\[-0\.3em\] {
-  margin-left: -0.3em;
 }
 
 .block {
@@ -897,6 +881,32 @@ p {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-5 {
+  --tw-translate-y: -1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -971,10 +981,6 @@ p {
   overflow: hidden;
 }
 
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -985,6 +991,10 @@ p {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-b-full {
@@ -1189,6 +1199,12 @@ p {
   transition-duration: 150ms;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-150 {
   transition-duration: 150ms;
 }
@@ -1201,12 +1217,12 @@ p {
   transition-duration: 700ms;
 }
 
-.hover\:opacity-70:hover {
-  opacity: 0.7;
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
-.group:hover .group-hover\:block {
-  display: block;
+.hover\:opacity-70:hover {
+  opacity: 0.7;
 }
 
 .group:hover .group-hover\:translate-x-\[-50\%\] {

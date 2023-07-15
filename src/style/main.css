@@ -726,10 +726,6 @@ p {
   margin-top: 2.5rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -829,6 +825,10 @@ p {
 
 .max-h-\[250px\] {
   max-height: 250px;
+}
+
+.max-h-\[320px\] {
+  max-height: 320px;
 }
 
 .min-h-\[120px\] {
@@ -996,6 +996,11 @@ p {
   gap: 2.25rem;
 }
 
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+
 .gap-x-12 {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
@@ -1021,9 +1026,8 @@ p {
        column-gap: 2rem;
 }
 
-.gap-x-9 {
-  -moz-column-gap: 2.25rem;
-       column-gap: 2.25rem;
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .gap-y-8 {
@@ -1032,20 +1036,6 @@ p {
 
 .gap-y-\[6px\] {
   row-gap: 6px;
-}
-
-.gap-y-10 {
-  row-gap: 2.5rem;
-}
-
-.gap-x-14 {
-  -moz-column-gap: 3.5rem;
-       column-gap: 3.5rem;
-}
-
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
 }
 
 .overflow-hidden {
@@ -1192,6 +1182,11 @@ p {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-20 {
@@ -1374,10 +1369,6 @@ p {
     display: none;
   }
 
-  .md\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
   .md\:bg-transparent {
     background-color: transparent;
   }
@@ -1419,5 +1410,10 @@ p {
   .lg\:gap-x-24 {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
+  }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }

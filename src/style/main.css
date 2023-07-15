@@ -710,10 +710,6 @@ p {
   margin-bottom: 1.25rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -738,8 +734,8 @@ p {
   margin-top: 0.75rem;
 }
 
-.mt-48 {
-  margin-top: 12rem;
+.mt-36 {
+  margin-top: 9rem;
 }
 
 .mt-5 {
@@ -750,24 +746,16 @@ p {
   margin-top: 1.5rem;
 }
 
+.mt-60 {
+  margin-top: 15rem;
+}
+
 .mt-7 {
   margin-top: 1.75rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-80 {
-  margin-top: 20rem;
-}
-
-.mt-60 {
-  margin-top: 15rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
 }
 
 .block {
@@ -863,6 +851,10 @@ p {
   width: 1.75rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-\[10px\] {
   width: 10px;
 }
@@ -880,6 +872,10 @@ p {
   width: 100%;
 }
 
+.min-w-\[350px\] {
+  min-width: 350px;
+}
+
 .max-w-\[430px\] {
   max-width: 430px;
 }
@@ -894,6 +890,14 @@ p {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .-translate-y-5 {
@@ -988,14 +992,18 @@ p {
   gap: 0px;
 }
 
+.gap-9 {
+  gap: 2.25rem;
+}
+
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
 .gap-x-20 {
   -moz-column-gap: 5rem;
        column-gap: 5rem;
-}
-
-.gap-x-24 {
-  -moz-column-gap: 6rem;
-       column-gap: 6rem;
 }
 
 .gap-x-5 {
@@ -1024,6 +1032,20 @@ p {
 
 .gap-y-\[6px\] {
   row-gap: 6px;
+}
+
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
+.gap-x-14 {
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+}
+
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 
 .overflow-hidden {
@@ -1352,6 +1374,10 @@ p {
     display: none;
   }
 
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .md\:bg-transparent {
     background-color: transparent;
   }
@@ -1363,12 +1389,35 @@ p {
   }
 }
 
+@media (min-width: 850px) {
+  .mdlg\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .mdlg\:flex-row {
+    flex-direction: row;
+  }
+
+  .mdlg\:flex-col {
+    flex-direction: column;
+  }
+
+  .mdlg\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: 1024px) {
+  .lg\:mt-48 {
+    margin-top: 12rem;
+  }
+
   .lg\:mt-80 {
     margin-top: 20rem;
   }
 
-  .lg\:mt-48 {
-    margin-top: 12rem;
+  .lg\:gap-x-24 {
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
   }
 }

@@ -5,7 +5,7 @@ const textContainers = document.querySelectorAll(`.experience-text-container`);
 const dateTexts = document.querySelectorAll(`.experience-date`); // where margin whill be applied
 const lineElements = document.querySelectorAll(`.experience-line`);
 
-for (let i = 1; i < totalExperiencesElements.length + 1; i++) {
+for (let i = 1; i <= totalExperiencesElements.length; i++) {
   const textHeight = textElements[i].clientHeight;
   const borderSize = textHeight / 2;
 
@@ -19,11 +19,12 @@ for (let i = 1; i < totalExperiencesElements.length + 1; i++) {
   }
 
   // set correct margin for centering
-
   const textContainerWidth = textContainers[i].clientWidth;
   const dateTextWidth = dateTexts[i].clientWidth;
 
   const margin = textContainerWidth - dateTextWidth;
+
+  console.log(rightSide);
 
   if (rightSide) {
     dateTexts[i].style.marginLeft = `${margin}px`;

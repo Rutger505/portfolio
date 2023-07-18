@@ -3,9 +3,12 @@ const sizeBlur = () => {
   const totalHeight = document.body.clientHeight;
 
   blurElement.style.height = `${totalHeight}px`;
-
-  console.log('fired');
 };
 
-window.addEventListener('resize', sizeBlur);
+const backgroundBlur = () => {
+  setTimeout(sizeBlur, 100);
+  sizeBlur();
+};
+
+window.addEventListener('resize', backgroundBlur);
 sizeBlur();

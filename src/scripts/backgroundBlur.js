@@ -1,5 +1,11 @@
-const backgroundBlur = document.querySelector('#background-blur');
+const sizeBlur = () => {
+  const blurElement = document.querySelector('#background-blur');
+  const totalHeight = document.body.clientHeight;
 
-const totalHeight = document.body.scrollHeight;
+  blurElement.style.height = `${totalHeight}px`;
 
-backgroundBlur.style.height = `${totalHeight}px`;
+  console.log('fired');
+};
+
+window.addEventListener('resize', sizeBlur);
+sizeBlur();

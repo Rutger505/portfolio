@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-
   /* font and color */
   header h1 {
-    @apply font-bold text-fontHeaderLogo text-header;
+    @apply text-fontHeaderLogo font-bold text-header;
   }
 
   header a,
   header p {
-    @apply text-header text-fontHeader;
+    @apply text-fontHeader text-header;
   }
 
   body {
@@ -23,12 +22,12 @@
   }
 
   h2 {
-    @apply text-text text-aroundXl;
+    @apply text-aroundXl text-text;
   }
 
   a,
   a span {
-    @apply text-text text-link;
+    @apply text-link text-text;
   }
 
   p {
@@ -59,35 +58,30 @@
 }
 
 @layer components {
-  @keyframes arrow-animation {
-    0% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .scroll-arrow {
-    animation: arrow-animation 3s infinite;
-  }
-
   .button {
-    @apply relative z-10 px-3 py-1 overflow-hidden duration-300 border rounded bg-none border-accent text-detail hover:text-text before:duration-300 before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-accent before:-z-10 before:hover:w-full;
+    @apply relative z-10 overflow-hidden rounded border border-accent bg-none px-3 py-1 text-detail duration-300 before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-0 before:bg-accent before:duration-300 hover:text-text before:hover:w-full;
   }
 }
 
 @layer utilities {
-  .animate-on-scroll {
-    @apply opacity-0 transition-all duration-1000 blur -translate-x-full
+  .animate-top {
+    @apply -translate-y-full opacity-0 transition-all  duration-500;
+  }
+  .animate-bottom {
+    @apply translate-y-full opacity-0 transition-all  duration-500;
+  }
+  .animate-left {
+    @apply -translate-x-1/2 opacity-0 transition-all   duration-500;
+  }
+  .animate-right {
+    @apply translate-x-1/2 opacity-0 transition-all  duration-500;
   }
 
-  .animate {
-    @apply opacity-100 translate-x-0 blur-0
+  .animate-on-scroll {
+    @apply -translate-x-1/2 opacity-0 transition-all  duration-1000;
+  }
+
+  .show {
+    @apply translate-x-0 translate-y-0 opacity-100;
   }
 }

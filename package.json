@@ -1,7 +1,7 @@
 {
   "scripts": {
     "tailwind": "npx tailwindcss -i ./input.css -o ./src/style/main.css --watch",
-    "browserSync": "browser-sync start --server --no-notify --files \"src/**/*\" --start-path \"src/index.html\"",
+    "browserSync": "browser-sync start --server --no-notify --files \"src/**/*\" --start-path \"src/\"",
     "dev": "concurrently --kill-others \"npm run browserSync\" \"npm run tailwind\"",
     "start": "npm run browserSync"
   },

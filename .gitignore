@@ -1,6 +1,4 @@
 # This file is not used yet
 docker-compose.yml
-# speaks for itself
-src/unused img/
 
 node_modules/

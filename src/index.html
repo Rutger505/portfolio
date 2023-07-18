@@ -21,7 +21,7 @@
 
   <body class="">
     <!-- absolute -->
-    <header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-700 md:bg-transparent md:backdrop-blur">
+    <header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-500 md:bg-transparent md:backdrop-blur">
       <div class="flex h-full items-center justify-between px-spacing">
         <a class="p-2 duration-150 hover:opacity-70" href="#home">
           <h1><span class="text-accent">R</span>utger</h1>
@@ -119,8 +119,8 @@
 
     <!-- normal -->
     <main id="home" class="mx-spacing flex min-h-screen flex-col">
-      <h2 class="animate-on-scroll mt-60 text-aroundXl text-text delay-100 lg:mt-80">&lt;/&gt; Software-Dev</h2>
-      <h1 class="animate-on-scroll leading-tight">
+      <h2 class="animate-on-scroll mt-60 text-mobileAroundXl text-text delay-100 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
+      <h1 class="animate-on-scroll text-mobileXl leading-tight xs:text-xl">
         Hi, I'm
         <span class="text-accent">Rutger</span>
         from the
@@ -128,7 +128,7 @@
         Netherlands
       </h1>
 
-      <div class="animate-on-scroll mt-36 delay-500 lg:mt-48">
+      <div class="animate-on-scroll mt-36 delay-500 lg:mt-40 xl:mt-40">
         <a class="w-fit" href="#my-work">
           Explore my projects
           <img class="ml-1 inline-block" src="img/arrow-down-icon.svg" alt="arrow down" />
@@ -139,7 +139,7 @@
 
       <div class="flex-1"></div>
 
-      <div class="my-5 flex justify-center">
+      <div class="my-14 hidden justify-center md:flex">
         <a class="animate-bounce" href="#about-me">
           <img src="img/arrow-down-icon.svg" alt="arrow down" />
         </a>
@@ -149,10 +149,10 @@
     <section id="about-me" class="mx-spacing py-32">
       <h1>Who am I?</h1>
       <div class="mt-10 flex flex-wrap gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
-        <div class="animate-on-scroll flex flex-shrink-0 items-center gap-x-10 mdlg:flex-col">
-          <img class="h-80 w-80 rounded-full bg-secondary" src="img/personal-photo.webp" alt="personal-photo" />
+        <div class="animate-on-scroll flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">
+          <img class="w-full max-w-[20rem] rounded-full bg-secondary sm:h-80 sm:w-80" src="img/personal-photo.webp" alt="personal-photo" />
 
-          <div class="flex flex-col items-center gap-9 mdlg:mt-16 mdlg:flex-row">
+          <div class="flex flex-row flex-wrap items-center gap-9 aboutMe:flex-col mdlg:mt-16 mdlg:flex-row">
             <a href="https://github.com/Rutger505" target="_blank">
               <img src="img/github-icon.svg" alt="my github" />
             </a>
@@ -164,7 +164,7 @@
             </a>
           </div>
         </div>
-        <div class="animate-on-scroll mt-8 min-w-[350px] max-w-[572px] flex-shrink delay-150">
+        <div class="animate-on-scroll mt-8 max-w-[572px] flex-shrink delay-150 sm:min-w-[350px]">
           <p>
             My name is Rutger Pronk, and I am currently studying to become a Software Developer in the Netherlands. I am currently a first year student at ROC Nijmegen.
           </p>
@@ -179,13 +179,13 @@
     <section id="my-work" class="mx-spacing py-32">
       <h1 class="animate-on-scroll">What can I do?</h1>
 
-      <p class="animate-on-scroll mt-10 max-w-[710px] delay-300">
+      <p class="animate-on-scroll mt-10 max-w-[710px] delay-200">
         I enjoy working with Java, C#, and web development (HTML, CSS, JavaScript, PHP, SQL). I have collaborated on projects, improving teamwork and communication
         skills. I use Git/GitHub for version control and Scrum/Trello for project management. Here are some notable projects showcasing my skills.
       </p>
       <h2 class="animate-on-scroll mt-10">My work</h2>
       <div class="mt-10 flex flex-col items-start gap-y-8">
-        <div class="animate-on-scroll flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
+        <div class="animate-on-scroll flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 delay-75 lg:px-20">
           <div class="flex flex-col items-start">
             <h2>Useful Autoclicker</h2>
             <p class="mt-5 max-w-[430px]">
@@ -259,22 +259,22 @@
         </div>
       </div>
       <h2 class="animate-on-scroll mt-10">My experiences</h2>
-      <div class="mt-10 flex">
-        <div class="w-2 rounded-full bg-secondary"></div>
+      <div class="mt-10 flex delay-200">
+        <div class="w-2 flex-shrink-0 rounded-full bg-secondary"></div>
         <div class="flex flex-col gap-y-14">
           <div class="ml-[-12px] flex items-start gap-x-10">
-            <div class="h-4 w-4 rounded-full bg-accent"></div>
-            <div class="flex flex-col gap-6">
+            <div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
+            <div class="animate-on-scroll flex flex-col gap-6">
               <p class="mb-2">Future</p>
               <div>
-                <h2>Persuiting career</h2>
+                <h2>Pursuing career</h2>
                 <p>Another School - HBO</p>
               </div>
             </div>
           </div>
           <div class="ml-[-12px] flex items-start gap-x-10">
-            <div class="h-4 w-4 rounded-full bg-accent"></div>
-            <div class="flex flex-col gap-6">
+            <div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
+            <div class="animate-on-scroll flex flex-col gap-6">
               <p class="mb-2 text-accent">2022 - Present</p>
               <div>
                 <h2>Student Software Developer</h2>
@@ -293,7 +293,7 @@
     <section id="contact" class="mx-spacing py-32">
       <h1 class="animate-on-scroll">Talk to me</h1>
       <div class="flex flex-wrap items-start justify-between gap-7 lg:flex-nowrap">
-        <div class="animate-on-scroll flex min-w-[350px] flex-wrap items-start justify-start gap-0">
+        <div class="animate-on-scroll flex flex-wrap items-start justify-start gap-0">
           <p>
             Do not hesitate to contact me through the form here or by direct email on
             <button id="copy-email" class="group relative inline cursor-pointer text-detail underline">
@@ -306,7 +306,7 @@
           </p>
         </div>
 
-        <div class="animate-on-scroll flex min-w-[370px] flex-col rounded-lg bg-secondary p-7 delay-300">
+        <div class="animate-on-scroll flex min-w-[80%] flex-col rounded-lg bg-secondary p-7 delay-300 sm:min-w-[370px]">
           <h2>Send me a message</h2>
           <input class="mt-6 w-full border-b-2 border-detail bg-none px-1 pb-2 text-text outline-none" type="text" placeholder="Name" />
           <input class="mt-6 w-full border-b-2 border-detail bg-none px-1 pb-2 text-text outline-none" type="text" placeholder="Email" />
@@ -318,7 +318,7 @@
       </div>
     </section>
 
-    <footer class="flex w-full flex-wrap items-center justify-center gap-x-20 gap-y-8 bg-secondary p-20 py-12 lg:flex-nowrap">
+    <footer class="flex w-full flex-wrap items-center justify-center gap-x-20 gap-y-8 bg-secondary p-14 py-12 sm:p-20 lg:flex-nowrap">
       <div class="flex gap-x-8">
         <a href="https://github.com/Rutger505" target="_blank">
           <img class="h-8" src="img/github-icon.svg" alt="my github" />

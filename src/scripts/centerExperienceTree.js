@@ -1,45 +1,62 @@
 const totalExperiencesElements = document.querySelectorAll('work-experience');
-const textElements = document.querySelectorAll('.experience-text');
-const borderElements = document.querySelectorAll(`.experience-border`);
-const textContainers = document.querySelectorAll(`.experience-text-container`);
-const dateTexts = document.querySelectorAll(`.experience-date`); // where margin whill be applied
-const lineElements = document.querySelectorAll(`.experience-line`);
 
-for (let i = 1; i <= totalExperiencesElements.length; i++) {
-  const textHeight = textElements[i].clientHeight;
+const setArrowSize = (experience, i) => {
+  const borderElement = experience.querySelector('.experience-border');
+  const textElement = experience.querySelector('.experience-text');
+  const textOnRight = (i + 1) % 2 == 0;
+
+  const textHeight = textElement.clientHeight;
   const borderSize = textHeight / 2;
+  borderElement.style.borderWidth = `${borderSize}px`;
 
-  // set correct border size
-  const rightSide = elementCount % 2 == 0;
-  borderElements[i].style.borderWidth = `${borderSize}px`;
-  if (rightSide) {
-    borderElements[i].style.marginLeft = `-${borderSize}px`;
+  // remove space from transparent border
+  if (textOnRight) {
+    borderElement.style.marginLeft = `-${borderSize}px`;
   } else {
-    borderElements[i].style.marginRight = `-${borderSize}px`;
+    borderElement.style.marginRight = `-${borderSize}px`;
   }
+};
 
-  // set correct margin for centering
-  const textContainerWidth = textContainers[i].clientWidth;
-  const dateTextWidth = dateTexts[i].clientWidth;
+const setCenteringMargin = (experience, i) => {
+  const textContainer = experience.querySelector('.experience-text-container');
+  const dateText = experience.querySelector('.experience-date');
+  const textOnRight = (i + 1) % 2 == 0;
 
-  const margin = textContainerWidth - dateTextWidth;
+  const textContainerWidth = textContainer.clientWidth;
+  const dateTextWidth = dateText.clientWidth;
 
-  console.log(rightSide);
+  const marginNeeded = textContainerWidth - dateTextWidth;
 
-  if (rightSide) {
-    dateTexts[i].style.marginLeft = `${margin}px`;
+  if (textOnRight) {
+    dateText.style.marginLeft = `${marginNeeded}px`;
   } else {
-    dateTexts[i].style.marginRight = `${margin}px`;
+    dateText.style.marginRight = `${marginNeeded}px`;
   }
+};
 
-  // rounded middle line only at top and bottom
-  if (elementCount == 1) {
-    lineElements[i].classList.add('rounded-t-full');
+const setLineBorderRadious = (experience, i) => {
+  const lineElement = experience.querySelector('.experience-line');
+  if (i === 0) {
+    lineElement.classList.add('rounded-t-full');
   }
-  lineElements[i].classList.add('rounded-b-full');
+  lineElement.classList.add('rounded-b-full');
 
-  if (elementCount !== 1) {
-    const oldLineElement = lineElements[i - 1];
+  if (i !== 0) {
+    const oldExperience = totalExperiencesElements[i - 1];
+    const oldLineElement = oldExperience.querySelector('.experience-line');
     oldLineElement.classList.remove('rounded-b-full');
   }
-}
+};
+
+const centerExperienceTree = (experience, i) => {
+  setArrowSize(experience, i);
+
+  setCenteringMargin(experience, i);
+
+  setLineBorderRadious(experience, i);
+};
+
+totalExperiencesElements.forEach((experience, i) => {
+  centerExperienceTree(experience, i);
+  window.addEventListener('resize', () => centerExperienceTree(experience, i));
+});

@@ -675,6 +675,10 @@ p {
   left: 2.5rem;
 }
 
+.left-7 {
+  left: 1.75rem;
+}
+
 .right-5 {
   right: 1.25rem;
 }
@@ -1048,16 +1052,16 @@ p {
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded-sm {
-  border-radius: 0.125rem;
 }
 
 .rounded-xl {
@@ -1114,20 +1118,12 @@ p {
   fill: #EFEDFDB5;
 }
 
-.p-14 {
-  padding: 3.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .p-7 {
@@ -1142,6 +1138,11 @@ p {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .px-spacing {
@@ -1159,32 +1160,8 @@ p {
   padding-bottom: 8rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-detail {
@@ -1368,10 +1345,6 @@ p {
 
   .sm\:min-w-\[370px\] {
     min-width: 370px;
-  }
-
-  .sm\:p-20 {
-    padding: 5rem;
   }
 
   .sm\:px-20 {

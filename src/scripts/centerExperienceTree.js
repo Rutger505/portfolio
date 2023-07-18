@@ -1,5 +1,3 @@
-const totalExperiencesElements = document.querySelectorAll('work-experience');
-
 const setArrowSize = (experience, i) => {
   const borderElement = experience.querySelector('.experience-border');
   const textElement = experience.querySelector('.experience-text');
@@ -56,6 +54,7 @@ const centerExperienceTree = (experience, i) => {
   setLineBorderRadious(experience, i);
 };
 
+const totalExperiencesElements = document.querySelectorAll('work-experience');
 totalExperiencesElements.forEach((experience, i) => {
   centerExperienceTree(experience, i);
   window.addEventListener('resize', () => centerExperienceTree(experience, i));

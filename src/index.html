@@ -14,8 +14,6 @@
     <script src="scripts/toTopButton.js" defer></script>
     <script src="scripts/animateOnScroll.js" defer></script>
     <script src="scripts/dropdownHeader.js" defer></script>
-    <script src="scripts/centerExperienceTree.js" defer></script>
-    <script src="scripts/experienceElement.js"></script>
     <!-- document icons -->
     <link rel="icon" href="img/website-icon.svg" type="image/svg+xml" />
     <link rel="icon" href="img/website-icon.png" type="image/png" />
@@ -261,14 +259,33 @@
         </div>
       </div>
       <h2 class="animate-on-scroll mt-10">My experiences</h2>
-      <div class="relative mt-10 flex justify-center">
-        <div class="animate-on-scroll flex flex-col items-center delay-300">
-          <work-experience text="I want to pursue further education after my studies." date="July 2026"></work-experience>
-          <work-experience text="I will graduate as a software developer." date="July 2026"></work-experience>
-          <work-experience text="I will intern for six months." date="January 2026"></work-experience>
-          <work-experience text="I will intern for six months." date="January 2025"></work-experience>
-          <work-experience text="I will intern at Gemini Embedded Technologies for six months." date="August 2023"></work-experience>
-          <work-experience text="Started studying Software Developer." date="August 2022"></work-experience>
+      <div class="mt-10 flex">
+        <div class="w-2 rounded-full bg-secondary"></div>
+        <div class="flex flex-col gap-y-14">
+          <div class="ml-[-12px] flex items-start gap-x-10">
+            <div class="h-4 w-4 rounded-full bg-accent"></div>
+            <div class="flex flex-col gap-6">
+              <p class="mb-2">Future</p>
+              <div>
+                <h2>Persuiting career</h2>
+                <p>Another School - HBO</p>
+              </div>
+            </div>
+          </div>
+          <div class="ml-[-12px] flex items-start gap-x-10">
+            <div class="h-4 w-4 rounded-full bg-accent"></div>
+            <div class="flex flex-col gap-6">
+              <p class="mb-2 text-accent">2022 - Present</p>
+              <div>
+                <h2>Student Software Developer</h2>
+                <p>ROC Nijmegen Technovium - MBO</p>
+              </div>
+              <div>
+                <h2>Intern learning embedded</h2>
+                <p>Gemini Embedded Technologies</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

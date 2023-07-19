@@ -7,3 +7,4 @@ const sizeBlur = () => {
 
 window.addEventListener('resize', sizeBlur);
 setInterval(sizeBlur, 500);
+sizeBlur();

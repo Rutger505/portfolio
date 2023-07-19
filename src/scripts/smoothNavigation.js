@@ -26,7 +26,7 @@ const ease = (t, b, c, d) => {
 const clickEvent = (event, link) => {
   event.preventDefault();
   const target = link.getAttribute('href');
-  const duration = 1000; // Adjust the duration (in milliseconds) as needed
+  const duration = 1000;
   smoothScroll(target, duration);
 };
 
@@ -36,3 +36,5 @@ anchorLinks.forEach((link) => {
     clickEvent(event, link);
   });
 });
+
+window.scrollTo(0, 0);

@@ -7,19 +7,19 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    rootMargin: '-80px',
+    rootMargin: '-25px',
   }
 );
 
 // prettier-ignore
 const animateClasses = [
-  '.animate-on-scroll',
-  
+  '.animate-fade-in',
+
   '.-animate-x-sm',
   '.-animate-x',
   '.-animate-x-md',
   '.-animate-x-lg',
-    
+
   '.animate-x-sm',
   '.animate-x',
   '.animate-x-md',

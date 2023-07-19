@@ -53,59 +53,59 @@
   }
 
   .-animate-y-sm {
-    @apply -translate-y-1/4 opacity-0 transition-all  duration-500;
+    @apply -translate-y-1/4 opacity-0 transition-all  duration-700;
   }
   .-animate-y {
-    @apply -translate-y-1/2 opacity-0 transition-all  duration-500;
+    @apply -translate-y-1/2 opacity-0 transition-all  duration-700;
   }
   .-animate-y-md {
-    @apply -translate-y-3/4 opacity-0 transition-all  duration-500;
+    @apply -translate-y-3/4 opacity-0 transition-all  duration-700;
   }
   .-animate-y-lg {
-    @apply -translate-y-full opacity-0 transition-all  duration-500;
+    @apply -translate-y-full opacity-0 transition-all  duration-700;
   }
 
   .animate-y-sm {
-    @apply translate-y-1/4 opacity-0 transition-all  duration-500;
+    @apply translate-y-1/4 opacity-0 transition-all  duration-700;
   }
   .animate-y {
-    @apply translate-y-1/2 opacity-0 transition-all duration-500;
+    @apply translate-y-1/2 opacity-0 transition-all duration-700;
   }
   .animate-y-md {
-    @apply translate-y-3/4 opacity-0 transition-all  duration-500;
+    @apply translate-y-3/4 opacity-0 transition-all  duration-700;
   }
   .animate-y-lg {
-    @apply translate-y-full opacity-0 transition-all  duration-500;
+    @apply translate-y-full opacity-0 transition-all  duration-700;
   }
 
   .-animate-x-sm {
-    @apply -translate-x-1/4 opacity-0 transition-all  duration-500;
+    @apply -translate-x-1/4 opacity-0 transition-all  duration-700;
   }
   .-animate-x {
-    @apply -translate-x-1/2 opacity-0 transition-all   duration-500;
+    @apply -translate-x-1/2 opacity-0 transition-all   duration-700;
   }
   .-animate-x-md {
-    @apply -translate-x-3/4 opacity-0 transition-all  duration-500;
+    @apply -translate-x-3/4 opacity-0 transition-all  duration-700;
   }
   .-animate-x-lg {
-    @apply -translate-x-full opacity-0 transition-all  duration-500;
+    @apply -translate-x-full opacity-0 transition-all  duration-700;
   }
 
   .animate-x-sm {
-    @apply translate-x-1/4 opacity-0 transition-all  duration-500;
+    @apply translate-x-1/4 opacity-0 transition-all  duration-700;
   }
   .animate-x {
-    @apply translate-x-1/2 opacity-0 transition-all  duration-500;
+    @apply translate-x-1/2 opacity-0 transition-all  duration-700;
   }
   .animate-x-md {
-    @apply translate-x-3/4 opacity-0 transition-all  duration-500;
+    @apply translate-x-3/4 opacity-0 transition-all  duration-700;
   }
   .animate-x-lg {
-    @apply translate-x-full opacity-0 transition-all  duration-500;
+    @apply translate-x-full opacity-0 transition-all  duration-700;
   }
 
-  .animate-on-scroll {
-    @apply -translate-x-1/2 opacity-0 transition-all  duration-1000;
+  .animate-fade-in {
+    @apply opacity-0 transition-all  duration-1000;
   }
 
   .show {

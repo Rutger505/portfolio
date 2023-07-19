@@ -5,10 +5,5 @@ const sizeBlur = () => {
   blurElement.style.height = `${totalHeight}px`;
 };
 
-const backgroundBlur = () => {
-  setTimeout(sizeBlur, 100);
-  sizeBlur();
-};
-
-window.addEventListener('resize', backgroundBlur);
-sizeBlur();
+window.addEventListener('resize', sizeBlur);
+setInterval(sizeBlur, 500);

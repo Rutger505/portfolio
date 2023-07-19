@@ -7,10 +7,35 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    rootMargin: '-80px',
   }
 );
 
-const elements = document.querySelectorAll('.animate-on-scroll, .animate-top, .animate-bottom, .animate-left, .animate-right');
+// prettier-ignore
+const animateClasses = [
+  '.animate-on-scroll',
+  
+  '.-animate-x-sm',
+  '.-animate-x',
+  '.-animate-x-md',
+  '.-animate-x-lg',
+    
+  '.animate-x-sm',
+  '.animate-x',
+  '.animate-x-md',
+  '.animate-x-lg',
+
+  '.-animate-y-sm',
+  '.-animate-y',
+  '.-animate-y-md',
+  '.-animate-y-lg',
+
+  '.animate-y-sm',
+  '.animate-y',
+  '.animate-y-md',
+  '.animate-y-lg',
+];
+
+const elements = document.querySelectorAll(`${animateClasses}`);
 
 elements.forEach((element) => observer.observe(element));

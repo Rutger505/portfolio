@@ -52,29 +52,56 @@
     background: #0e1018bb;
   }
 
-  .bg-none {
-    background-color: transparent;
+  .-animate-y-sm {
+    @apply -translate-y-1/4 opacity-0 transition-all  duration-500;
   }
-}
-
-@layer components {
-  .button {
-    @apply relative z-10 overflow-hidden rounded border border-accent bg-none px-3 py-1 text-detail duration-300 before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-0 before:bg-accent before:duration-300 hover:text-text before:hover:w-full;
+  .-animate-y {
+    @apply -translate-y-1/2 opacity-0 transition-all  duration-500;
   }
-}
-
-@layer utilities {
-  .animate-top {
+  .-animate-y-md {
+    @apply -translate-y-3/4 opacity-0 transition-all  duration-500;
+  }
+  .-animate-y-lg {
     @apply -translate-y-full opacity-0 transition-all  duration-500;
   }
-  .animate-bottom {
+
+  .animate-y-sm {
+    @apply translate-y-1/4 opacity-0 transition-all  duration-500;
+  }
+  .animate-y {
+    @apply translate-y-1/2 opacity-0 transition-all duration-500;
+  }
+  .animate-y-md {
+    @apply translate-y-3/4 opacity-0 transition-all  duration-500;
+  }
+  .animate-y-lg {
     @apply translate-y-full opacity-0 transition-all  duration-500;
   }
-  .animate-left {
+
+  .-animate-x-sm {
+    @apply -translate-x-1/4 opacity-0 transition-all  duration-500;
+  }
+  .-animate-x {
     @apply -translate-x-1/2 opacity-0 transition-all   duration-500;
   }
-  .animate-right {
+  .-animate-x-md {
+    @apply -translate-x-3/4 opacity-0 transition-all  duration-500;
+  }
+  .-animate-x-lg {
+    @apply -translate-x-full opacity-0 transition-all  duration-500;
+  }
+
+  .animate-x-sm {
+    @apply translate-x-1/4 opacity-0 transition-all  duration-500;
+  }
+  .animate-x {
     @apply translate-x-1/2 opacity-0 transition-all  duration-500;
+  }
+  .animate-x-md {
+    @apply translate-x-3/4 opacity-0 transition-all  duration-500;
+  }
+  .animate-x-lg {
+    @apply translate-x-full opacity-0 transition-all  duration-500;
   }
 
   .animate-on-scroll {
@@ -82,6 +109,12 @@
   }
 
   .show {
-    @apply translate-x-0 translate-y-0 opacity-100;
+    @apply translate-x-0 translate-y-0 opacity-100 blur-0;
+  }
+}
+
+@layer components {
+  .button {
+    @apply relative z-10 overflow-hidden rounded border border-accent bg-none px-3 py-1 text-detail duration-300 before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-0 before:bg-accent before:duration-300 hover:text-text before:hover:w-full;
   }
 }

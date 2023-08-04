@@ -33,6 +33,12 @@ const showUnderline = (underline) => {
 };
 
 const underlineHeaderMain = () => {
+  // throttle
+  window.removeEventListener('scroll', underlineHeaderMain);
+  setTimeout(() => {
+    window.addEventListener('scroll', underlineHeaderMain);
+  }, 30);
+
   const currentScroll = window.scrollY;
   const currentSection = getCurrentSection(scrollSections, currentScroll);
   if (currentSection === -1) {
@@ -45,8 +51,6 @@ const underlineHeaderMain = () => {
   showUnderline(currentUnderline);
 };
 
-window.addEventListener('scroll', underlineHeaderMain);
-
 const hideUnderlineClass = 'translate-x-[-101%]';
 const showUnderlineClass = 'translate-x-0';
 const hoverUnderlineClass = 'group-hover:translate-x-[-50%]';
@@ -54,4 +58,5 @@ const hoverUnderlineClass = 'group-hover:translate-x-[-50%]';
 const underlines = document.querySelectorAll('.header-underline');
 const scrollSections = getSectionScrollPositions();
 
+window.addEventListener('scroll', underlineHeaderMain);
 underlineHeaderMain();

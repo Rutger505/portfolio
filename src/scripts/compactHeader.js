@@ -1,5 +1,11 @@
 const compactHeaderMain = () => {
-  if (window.scrollY > 10) {
+  // throttle
+  window.removeEventListener('scroll', compactHeaderMain);
+  setTimeout(() => {
+    window.addEventListener('scroll', compactHeaderMain);
+  }, 30);
+
+  if (window.scrollY > 20) {
     header.classList.add('h-16');
     header.classList.remove('h-24');
   } else {

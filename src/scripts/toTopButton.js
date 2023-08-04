@@ -1,9 +1,17 @@
-const toTopButton = document.querySelector('#to-top-button');
+const toTopButtonElement = document.querySelector('#to-top-button');
 
-window.addEventListener('scroll', () => {
+const toTopButton = () => {
+  // throttle
+  window.removeEventListener('scroll', toTopButton);
+  setTimeout(() => {
+    window.addEventListener('scroll', toTopButton);
+  }, 50);
+
   if (window.scrollY > 200) {
-    toTopButton.classList.add('opacity-100');
+    toTopButtonElement.classList.add('opacity-100');
   } else {
-    toTopButton.classList.remove('opacity-100');
+    toTopButtonElement.classList.remove('opacity-100');
   }
-});
+};
+
+window.addEventListener('scroll', toTopButton);

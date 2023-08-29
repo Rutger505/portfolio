@@ -862,6 +862,10 @@ p {
   margin-top: 2.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -912,6 +916,10 @@ p {
 
 .hidden {
   display: none;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .h-12 {
@@ -1303,6 +1311,10 @@ p {
 
 .text-detail {
   font-size: 20px;
+}
+
+.text-link {
+  font-size: 30px;
 }
 
 .text-mobileAroundXl {

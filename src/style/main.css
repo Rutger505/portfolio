@@ -914,12 +914,12 @@ p {
   display: inline-flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-12 {

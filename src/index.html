@@ -14,6 +14,7 @@
     <script src="scripts/animateOnScroll.js" defer></script>
     <script src="scripts/dropdownHeader.js" defer></script>
     <script src="scripts/backgroundBlur.js" defer></script>
+    <script src="scripts/languageHandeler.js" defer></script>
     <!-- document icons -->
     <link rel="icon" href="img/website-icon.svg" type="image/svg+xml" />
     <link rel="icon" href="img/website-icon.png" type="image/png" />
@@ -37,35 +38,44 @@
           <ul class="flex gap-x-7">
             <li class="hidden md:block">
               <a class="group p-2" href="#about-me">
-                <p class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                  Over Mij
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <p class="about-me">Over Mij</p>
                   <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-                </p>
+                </div>
               </a>
             </li>
             <li class="hidden md:block">
               <a class="group p-2" href="#my-work">
-                <p class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                  Mijn Werk
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <p class="my-work">Mijn Werk</p>
                   <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-                </p>
+                </div>
               </a>
             </li>
             <li class="hidden md:block">
               <a class="group p-2" href="#contact">
-                <p class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                  Contact
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <p class="contact">Contact</p>
                   <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-                </p>
+                </div>
               </a>
             </li>
-            <li class="hidden md:block">
-              <a class="group p-2" href="en/">
-                <p class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+            <li class="header-translate-en hidden md:block">
+              <a class="group p-2" href="http://rutgerpronk.com/">
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
                   <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-                  EN
+                  <p class="inline-block">EN</p>
                   <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-                </p>
+                </div>
+              </a>
+            </li>
+            <li class="header-translate-nl !hidden">
+              <a class="group p-2" href="http://rutgerpronk.nl/">
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                  <p class="inline-block">NL</p>
+                  <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+                </div>
               </a>
             </li>
             <li class="block md:hidden">
@@ -84,25 +94,33 @@
         <ul class="flex flex-col items-center">
           <li>
             <a class="group block h-fit p-4" href="#about-me">
-              <p class="overflow-hidden text-header duration-300 group-focus:text-accent">Over Mij</p>
+              <p class="about-me overflow-hidden text-header duration-300 group-focus:text-accent">Over Mij</p>
             </a>
           </li>
           <li>
             <a class="group block h-fit p-4" href="#my-work">
-              <p class="overflow-hidden text-header duration-300 group-focus:text-accent">Mijn Werk</p>
+              <p class="my-work overflow-hidden text-header duration-300 group-focus:text-accent">Mijn Werk</p>
             </a>
           </li>
           <li>
             <a class="group block h-fit p-4" href="#contact">
-              <p class="overflow-hidden text-header duration-300 group-focus:text-accent">Contact</p>
+              <p class="contact overflow-hidden text-header duration-300 group-focus:text-accent">Contact</p>
             </a>
           </li>
-          <li>
-            <a class="group block h-fit p-4" href="en/">
-              <p class="overflow-hidden text-header duration-300 group-focus:text-accent">
+          <li class="header-translate-en">
+            <a class="group block h-fit p-4" href="http://rutgerpronk.com/">
+              <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
                 <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-                EN
-              </p>
+                <p class="inline-block">EN</p>
+              </div>
+            </a>
+          </li>
+          <li class="header-translate-nl !hidden">
+            <a class="group block h-fit p-4" href="http://rutgerpronk.nl/">
+              <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
+                <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                <p class="inline-block">NL</p>
+              </div>
             </a>
           </li>
         </ul>
@@ -112,7 +130,7 @@
     <!-- scroll -->
     <main id="home" class="mx-spacing flex min-h-screen flex-col">
       <h2 class="animate-y-md mt-60 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
-      <h1 class="animate-y text-mobileXl leading-tight xs:text-xl">
+      <h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl">
         Hallo, ik ben
         <span class="text-accent">Rutger</span>
         uit
@@ -122,7 +140,7 @@
 
       <div class="animate-y-lg mt-36 delay-300 lg:mt-40 xl:mt-40">
         <a class="w-fit" href="#my-work">
-          Ontdek mijn projecten
+          <p id="explore-projects" class="inline-block text-link text-text">Ontdek mijn projecten</p>
           <img class="ml-1 inline-block" src="img/arrow-down-icon.svg" alt="arrow down" />
         </a>
       </div>
@@ -176,18 +194,18 @@
         communicatie skills heb verbeterd. Ik maak gebruik van Git/GitHub voor versiebeheer en Scrum/Trello voor projectmanagement. Hier zijn enkele projecten die mijn
         vaardigheden laten zien.
       </p>
-      <h2 class="animate-y-md mt-10">Mijn werk</h2>
+      <h2 id="my-work-projects-title" class="animate-y-md mt-10">Mijn werk</h2>
       <div class="mt-10 flex flex-col items-start gap-y-8">
         <div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
           <div class="flex flex-col items-start">
-            <h2>Useful Autoclicker</h2>
-            <p class="mt-5 max-w-[430px]">
+            <h2 id="autoclicker-title">Useful Autoclicker</h2>
+            <p id="autoclicker-explanation" class="mt-5 max-w-[430px]">
               Een GUI-project in development. Oorspronkelijk gemaakt in Java, wordt het nu herschreven in C#. Deze autoclicker-tool is een project waar ik de afgelopen
               zes maanden aan heb gewerkt.
             </p>
             <div class="flex-1"></div>
             <a class="button group mt-5" href="https://github.com/Rutger505/Useful-Autoclicker" target="_blank">
-              Ga naar Github repo
+              <p class="go-to-github inline">Ga naar Github repo</p>
               <svg class="inline-block fill-detail group-hover:fill-text" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.64108 20L0 18.3658L16.0982 2.33463H1.32849V0H20.0837V18.677H17.7393V3.96887L1.64108 20Z" fill-opacity="0.702" />
               </svg>
@@ -197,14 +215,14 @@
         </div>
         <div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
           <div class="flex flex-col items-start">
-            <h2>Reisbureau</h2>
-            <p class="mt-5 max-w-[430px]">
+            <h2 id="travel-agency-title">Reisbureau</h2>
+            <p id="travel-agency-explanation" class="mt-5 max-w-[430px]">
               Een project waarbij gebruik wordt gemaakt van HTML, CSS, Tailwind CSS, PHP, MySQL en API-integratie. Ik heb drie maanden samengewerkt met een andere
               ontwikkelaar om deze reisbureau-website te ontwikkelen.
             </p>
             <div class="flex-1"></div>
             <a class="button group mt-5" href="https://github.com/Rutger505/Reisbureau" target="_blank">
-              Ga naar Github repo
+              <p class="go-to-github inline">Ga naar Github repo</p>
               <svg class="inline-block fill-detail group-hover:fill-text" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.64108 20L0 18.3658L16.0982 2.33463H1.32849V0H20.0837V18.677H17.7393V3.96887L1.64108 20Z" fill-opacity="0.702" />
               </svg>
@@ -214,14 +232,14 @@
         </div>
         <div class="animate-y-sm flex h-fit flex-wrap justify-between rounded-lg bg-secondary px-10 py-10 lg:px-20">
           <div class="flex flex-col items-start">
-            <h2>No Time To Die</h2>
-            <p class="mt-5 max-w-[430px]">
-              Een gamejam-project, dit is een survivalgame met rondes. dit project is in slechts 16 uur is gemaakt met Gamemaker. Ik heb samengewerkt met een team van 5
-              mensen om dit spel te ontwikkelen.
+            <h2 id="no-time-to-die-title">No Time To Die</h2>
+            <p id="no-time-to-die-explanation" class="mt-5 max-w-[430px]">
+              A gamejam project, this is a round-based survival game created in just 16 hours using Gamemaker. I collaborated with a team of 5 members to deliver this
+              game.
             </p>
             <div class="flex-1"></div>
-            <a class="button group mt-5" href="https://github.com/Rutger505/Gamejam" target="_blank">
-              Ga naar Github repo
+            <a class="button mt-5" href="https://github.com/Rutger505/Gamejam" target="_blank">
+              <p class="go-to-github inline">Ga naar Github repo</p>
               <svg class="inline-block fill-detail group-hover:fill-text" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.64108 20L0 18.3658L16.0982 2.33463H1.32849V0H20.0837V18.677H17.7393V3.96887L1.64108 20Z" fill-opacity="0.702" />
               </svg>
@@ -230,31 +248,31 @@
           <img class="mt-7 max-h-[320px]" src="img/no-time-to-die.webp" alt="useful autoclicker" />
         </div>
       </div>
-      <h2 class="animate-y-md mt-10">Mijn ervaringen</h2>
+      <h2 id="my-work-experience-title" class="animate-y-md mt-20">Mijn ervaringen</h2>
       <div class="mt-10 flex">
         <div class="w-2 flex-shrink-0 rounded-full bg-secondary"></div>
         <div class="flex flex-col gap-y-14">
           <div class="ml-[-12px] flex items-start gap-x-10">
             <div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
             <div class="flex flex-col gap-2">
-              <p class="mb-2">Toekomst</p>
+              <p id="my-work-experiences-times-future" class="my-work-experiences-times mb-2">Toekomst</p>
               <div>
-                <h2 class="animate-y leading-tight">Door studeren</h2>
-                <p class="animate-y delay-75">Andere School - HBO</p>
+                <h2 id="my-work-experiences-explanation-continue" class="animate-yleading-tight">Door studeren</h2>
+                <p id="my-work-experiences-location-continue" class="animate-y delay-75">Andere School - HBO</p>
               </div>
             </div>
           </div>
           <div class="ml-[-12px] flex items-start gap-x-10">
             <div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
             <div class="flex flex-col gap-2">
-              <p class="mb-2 text-accent">2022 - Heden</p>
+              <p id="my-work-experiences-times-2022" class="mb-2 text-accent">2022 - Heden</p>
               <div>
-                <h2 class="animate-y leading-tight">Student Software Developer</h2>
-                <p class="animate-y delay-75">ROC Nijmegen Technovium - MBO</p>
+                <h2 id="my-work-experiences-explanation-student" class="animate-y leading-tight">Student Software Developer</h2>
+                <p id="my-work-experiences-location-student" class="animate-y my-work-experiences-location delay-75">ROC Nijmegen Technovium - MBO</p>
               </div>
               <div>
-                <h2 class="animate-y leading-tight delay-75">Stage embedded leren</h2>
-                <p class="animate-y delay-150">Gemini Embedded Technologies</p>
+                <h2 id="my-work-experiences-explanation-intern-gemini" class="animate-y my-work-experiences-explanation leading-tight delay-75">Stage embedded leren</h2>
+                <p id="my-work-experiences-location-intern-gemini" class="animate-y my-work-experiences-location delay-150">Gemini Embedded Technologies</p>
               </div>
             </div>
           </div>
@@ -266,8 +284,8 @@
       <h1>Neem contact op</h1>
       <div class="flex flex-wrap items-start justify-between gap-7 lg:flex-nowrap">
         <div class="flex flex-wrap items-start justify-start gap-0">
-          <p class="animate-y max-w-[750px]">
-            Voel je vrij om contact met me op te nemen via het formulier hier of rechtstreeks via e-mail op
+          <div class="animate-y max-w-[750px]">
+            <p id="contact-text" class="inline">Voel je vrij om contact met me op te nemen via het formulier hier of rechtstreeks via e-mail op</p>
             <span class="inline-flex">
               <button id="copy-email" class="group relative inline cursor-pointer text-detail underline">
                 <p id="copy-email-address">rutger.pronk19@gmail.com</p>
@@ -275,23 +293,29 @@
                   Email gekopieërd!
                 </div>
               </button>
-              .
+              <p>.</p>
             </span>
-          </p>
+          </div>
         </div>
 
         <div class="animate-y-sm flex min-w-[80%] flex-col rounded-lg bg-secondary p-7 delay-300 sm:min-w-[370px]">
-          <h2>stuur me een bericht</h2>
-          <input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="Naam" />
-          <input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="Email" />
-          <input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="Onderwerp" />
+          <h2 id="contact-form-title">Stuur me een bericht</h2>
+          <input id="contact-form-name" class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="Naam" />
+          <input id="contact-form-email" class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="Email" />
+          <input
+            id="contact-form-subject"
+            class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none"
+            type="text"
+            placeholder="Onderwerp"
+          />
           <textarea
+            id="contact-form-message"
             class="mt-6 min-h-[120px] w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none"
             type="text"
             placeholder="Bericht"
           ></textarea>
-          <button id="form-button" class="button mt-10">Verstuur bericht</button>
-          <p class="mt-3 text-red">Nog in contructie</p>
+          <button id="contact-form-button" class="button mt-10">Verstuur bericht</button>
+          <p id="contact-form-warning" class="mt-3 text-red">In contructie</p>
         </div>
       </div>
     </section>

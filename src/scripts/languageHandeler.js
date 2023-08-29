@@ -31,9 +31,9 @@ const translateHeader = () => {
 
   const translateEN = document.querySelectorAll('.header-translate-en');
   const translateNL = document.querySelectorAll('.header-translate-nl');
-  translateEN[0].classList.add('!hidden');
+  translateEN[0].classList.add('hidden');
   translateEN[1].classList.add('!hidden');
-  translateNL[0].classList.remove('!hidden');
+  translateNL[0].classList.add('md:block');
   translateNL[1].classList.remove('!hidden');
 };
 

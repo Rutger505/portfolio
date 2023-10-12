@@ -1,18 +1,15 @@
 <?php
 
-echo "Hello world!";
-echo "this is a dream of mine";
-echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']
+require_once "language.php";
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Het portfolio van Rutger Pronk." />
+  <meta name="description" content="<? echo text('description') ?>" />
   <title>Rutger Pronk</title>
   <link rel="stylesheet" href="style/main.css" />
   <script src="scripts/smoothNavigation.js" defer></script>
@@ -147,9 +144,10 @@ echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']
       Nederland
     </h1>
 
+
     <div class="animate-y-lg mt-36 delay-300 lg:mt-40 xl:mt-40">
       <a class="w-fit" href="#my-work">
-        <p id="explore-projects" class="inline-block text-link text-text">Ontdek mijn projecten en mijn goeie dingenasdfasdfsd</p>
+        <p id="explore-projects" class="inline-block text-link text-text">Ontdek mijn projecten</p>
         <img class="ml-1 inline-block" src="img/arrow-down-icon.svg" alt="arrow down" />
       </a>
     </div>

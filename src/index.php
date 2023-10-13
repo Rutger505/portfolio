@@ -10,7 +10,7 @@ require_once "language.php";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="<?php echo text('description'); ?>" />
-  <title>Rutger Pronk</title>
+  <title>Rutger Pronk - Portfolio</title>
 
   <link rel="stylesheet" href="style/main.css" />
   <!-- document icons -->
@@ -37,7 +37,7 @@ require_once "language.php";
           <li class="hidden md:block">
             <a class="group p-2" href="#about-me">
               <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                <p class="about-me">Over Mij</p>
+                <p class="about-me"><?php echo text('aboutMe') ?></p>
                 <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
               </div>
             </a>
@@ -45,7 +45,7 @@ require_once "language.php";
           <li class="hidden md:block">
             <a class="group p-2" href="#my-work">
               <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                <p class="my-work">Mijn Werk</p>
+                <p class="my-work"><?php echo text('myWork') ?></p>
                 <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
               </div>
             </a>
@@ -53,29 +53,32 @@ require_once "language.php";
           <li class="hidden md:block">
             <a class="group p-2" href="#contact">
               <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                <p class="contact">Contact</p>
+                <p class="contact"><?php echo text('contact') ?></p>
                 <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
               </div>
             </a>
           </li>
-          <li class="header-translate-en hidden md:block">
-            <a class="group p-2" href="http://rutgerpronk.com/">
-              <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-                <p class="inline-block">EN</p>
-                <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-              </div>
-            </a>
-          </li>
-          <li class="header-translate-nl hidden">
-            <a class="group p-2" href="http://rutgerpronk.nl/">
-              <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
-                <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-                <p class="inline-block">NL</p>
-                <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-              </div>
-            </a>
-          </li>
+          <?php if ($language == "nl") : ?>
+            <li class="hidden md:block">
+              <a class="group p-2" href="http://rutgerpronk.com/">
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                  <p class="inline-block">EN</p>
+                  <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+                </div>
+              </a>
+            </li>
+          <?php elseif ($language == "en") : ?>
+            <li class="hidden md:block">
+              <a class="group p-2" href="http://rutgerpronk.nl/">
+                <div class="overflow-hidden text-header duration-300 group-hover:opacity-80">
+                  <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                  <p class="inline-block">NL</p>
+                  <span class="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+                </div>
+              </a>
+            </li>
+          <?php endif; ?>
           <li class="block md:hidden">
             <button id="dropdown-button" class="group flex h-full w-7 cursor-pointer flex-col items-center justify-center gap-y-[6px]">
               <div class="h-[3px] w-full rounded-xl bg-header transition-all duration-300 group-hover:bg-accent"></div>
@@ -92,35 +95,38 @@ require_once "language.php";
       <ul class="flex flex-col items-center">
         <li>
           <a class="group block h-fit p-4" href="#about-me">
-            <p class="about-me overflow-hidden text-header duration-300 group-focus:text-accent">Over Mij</p>
+            <p class="about-me overflow-hidden text-header duration-300 group-focus:text-accent"><?php echo text('aboutMe') ?></p>
           </a>
         </li>
         <li>
           <a class="group block h-fit p-4" href="#my-work">
-            <p class="my-work overflow-hidden text-header duration-300 group-focus:text-accent">Mijn Werk</p>
+            <p class="my-work overflow-hidden text-header duration-300 group-focus:text-accent"><?php echo text('myWork') ?></p>
           </a>
         </li>
         <li>
           <a class="group block h-fit p-4" href="#contact">
-            <p class="contact overflow-hidden text-header duration-300 group-focus:text-accent">Contact</p>
+            <p class="contact overflow-hidden text-header duration-300 group-focus:text-accent"><?php echo text('contact') ?></p>
           </a>
         </li>
-        <li class="header-translate-en">
-          <a class="group block h-fit p-4" href="http://rutgerpronk.com/">
-            <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
-              <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-              <p class="inline-block">EN</p>
-            </div>
-          </a>
-        </li>
-        <li class="header-translate-nl !hidden">
-          <a class="group block h-fit p-4" href="http://rutgerpronk.nl/">
-            <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
-              <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
-              <p class="inline-block">NL</p>
-            </div>
-          </a>
-        </li>
+        <?php if ($language == "nl") : ?>
+          <li>
+            <a class="group block h-fit p-4" href="http://rutgerpronk.com/">
+              <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
+                <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                <p class="inline-block">EN</p>
+              </div>
+            </a>
+          </li>
+        <?php elseif ($language == "en") : ?>
+          <li>
+            <a class="group block h-fit p-4" href="http://rutgerpronk.nl/">
+              <div class="overflow-hidden text-header duration-300 group-focus:text-accent">
+                <img class="inline-block" src="img/language-icon.svg" alt="language-icon" />
+                <p class="inline-block">NL</p>
+              </div>
+            </a>
+          </li>
+        <?php endif; ?>
       </ul>
     </nav>
   </header>
@@ -320,15 +326,15 @@ require_once "language.php";
     </div>
     <p>© 2023 Rutger Pronk</p>
   </footer>
-  <script src="scripts/smoothNavigation.js" defer></script>
-  <script src="scripts/compactHeader.js" defer></script>
-  <script src="scripts/underlineHeader.js" defer></script>
-  <script src="scripts/copyEmail.js" defer></script>
-  <script src="scripts/toTopButton.js" defer></script>
-  <script src="scripts/animateOnScroll.js" defer></script>
-  <script src="scripts/dropdownHeader.js" defer></script>
-  <script src="scripts/backgroundBlur.js" defer></script>
-  <script src="scripts/languageHandeler.js" defer></script>
+  <script src="scripts/smoothNavigation.js"></script>
+  <script src="scripts/compactHeader.js"></script>
+  <script src="scripts/underlineHeader.js"></script>
+  <script src="scripts/copyEmail.js"></script>
+  <script src="scripts/toTopButton.js"></script>
+  <script src="scripts/animateOnScroll.js"></script>
+  <script src="scripts/dropdownHeader.js"></script>
+  <script src="scripts/backgroundBlur.js"></script>
+  <script src="scripts/languageHandeler.js"></script>
 </body>
 
 </html>

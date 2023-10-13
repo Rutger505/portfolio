@@ -21,7 +21,7 @@ function getLanguage()
 function text($str)
 {
     global $text;
-    // check if $text exisst before returning
+    // check if $text exist before returning
     if (isset($text[$str])) {
         return $text[$str];
     }

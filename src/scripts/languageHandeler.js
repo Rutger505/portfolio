@@ -28,13 +28,6 @@ const translateHeader = () => {
   translateElements(aboutMeElements, 'About me');
   translateElements(myWorkElements, 'My work');
   translateElements(contactElements, 'Contact');
-
-  const translateEN = document.querySelectorAll('.header-translate-en');
-  const translateNL = document.querySelectorAll('.header-translate-nl');
-  translateEN[0].classList.add('hidden');
-  translateEN[1].classList.add('!hidden');
-  translateNL[0].classList.add('md:block');
-  translateNL[1].classList.remove('!hidden');
 };
 
 const translateHome = () => {
@@ -153,9 +146,9 @@ const translate = () => {
   translateContact();
 };
 
-const urlInfo = window.location.href;
-const isCom = urlInfo.indexOf('.com') !== -1;
+// const urlInfo = window.location.href;
+// const isCom = urlInfo.indexOf('.com') !== -1;
 
-if (isCom) {
-  translate();
-}
+// if (isCom) {
+//   translate();
+// }

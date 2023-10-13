@@ -23,7 +23,7 @@ const ease = (t, b, c, d) => {
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
 
-const clickEvent = (event, link) => {
+const smoothNavigation = (event, link) => {
   event.preventDefault();
   const target = link.getAttribute('href');
   const duration = 1000;
@@ -33,7 +33,7 @@ const clickEvent = (event, link) => {
 const anchorLinks = document.querySelectorAll('a[href^="#"]');
 anchorLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
-    clickEvent(event, link);
+    smoothNavigation(event, link);
   });
 });
 

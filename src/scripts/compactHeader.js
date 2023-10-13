@@ -1,11 +1,11 @@
-const compactHeaderMain = () => {
+const compactHeader = () => {
   // throttle
-  window.removeEventListener('scroll', compactHeaderMain);
+  window.removeEventListener('scroll', compactHeader);
   setTimeout(() => {
-    window.addEventListener('scroll', compactHeaderMain);
+    window.addEventListener('scroll', compactHeader);
   }, 30);
 
-  if (window.scrollY > 20) {
+  if (window.scrollY > 30) {
     header.classList.add('h-16');
     header.classList.remove('h-24');
   } else {
@@ -15,5 +15,5 @@ const compactHeaderMain = () => {
 };
 
 const header = document.querySelector('header');
-window.addEventListener('scroll', compactHeaderMain);
-compactHeaderMain();
+window.addEventListener('scroll', compactHeader);
+compactHeader();

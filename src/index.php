@@ -1,6 +1,6 @@
 <?php
 
-//require_once "language.php";
+require_once "language.php";
 
 ?>
 <!DOCTYPE html>
@@ -9,19 +9,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="<? //echo text('description') 
-                                    ?>" />
+  <meta name="description" content="<?php echo text('description'); ?>" />
   <title>Rutger Pronk</title>
+
   <link rel="stylesheet" href="style/main.css" />
-  <script src="scripts/smoothNavigation.js" defer></script>
-  <script src="scripts/compactHeader.js" defer></script>
-  <script src="scripts/underlineHeader.js" defer></script>
-  <script src="scripts/copyEmail.js" defer></script>
-  <script src="scripts/toTopButton.js" defer></script>
-  <script src="scripts/animateOnScroll.js" defer></script>
-  <script src="scripts/dropdownHeader.js" defer></script>
-  <script src="scripts/backgroundBlur.js" defer></script>
-  <script src="scripts/languageHandeler.js" defer></script>
   <!-- document icons -->
   <link rel="icon" href="img/website-icon.svg" type="image/svg+xml" />
   <link rel="icon" href="img/website-icon.png" type="image/png" />
@@ -137,13 +128,10 @@
   <!-- scroll -->
   <main id="home" class="mx-spacing flex min-h-screen flex-col">
     <h2 class="animate-y-md mt-60 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
-    <h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl">
-      Hallo, ik ben
-      <span class="text-accent">Rutger</span>
-      uit
-      <br />
-      Nederland
+    <h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px]">
+      Hallo, ik ben Rutger uit Nederland
     </h1>
+    <script src="scripts/highlightRutger.js"></script>
 
 
     <div class="animate-y-lg mt-36 delay-300 lg:mt-40 xl:mt-40">
@@ -332,6 +320,15 @@
     </div>
     <p>© 2023 Rutger Pronk</p>
   </footer>
+  <script src="scripts/smoothNavigation.js" defer></script>
+  <script src="scripts/compactHeader.js" defer></script>
+  <script src="scripts/underlineHeader.js" defer></script>
+  <script src="scripts/copyEmail.js" defer></script>
+  <script src="scripts/toTopButton.js" defer></script>
+  <script src="scripts/animateOnScroll.js" defer></script>
+  <script src="scripts/dropdownHeader.js" defer></script>
+  <script src="scripts/backgroundBlur.js" defer></script>
+  <script src="scripts/languageHandeler.js" defer></script>
 </body>
 
 </html>

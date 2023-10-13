@@ -160,19 +160,19 @@ require_once "language.php";
 
   <section id="about-me" class="mx-spacing py-24 mdlg:py-32">
     <h1><?php echo text('aboutMeTitle') ?></h1>
-    <div class="mt-10 flex flex-wrap gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
+    <div class="mt-24 flex flex-wrap gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
       <div class="flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">
         <img class="w-full max-w-[20rem] rounded-full bg-secondary sm:h-80 sm:w-80" src="img/personal-photo.webp" alt="personal-photo" />
 
         <div class="flex flex-row flex-wrap items-center gap-9 aboutMe:flex-col mdlg:flex-row">
           <a class="animate-y-md duration-500" href="https://github.com/Rutger505" target="_blank">
-            <img src="img/github-icon.svg" alt="my github" />
+            <img class="h-8" src="img/github-icon.svg" alt="my github" />
           </a>
           <a class="animate-y-md delay-75 duration-500" href="https://www.linkedin.com/in/rutger-pronk-585149273/" target="_blank">
-            <img src="img/linkedin-icon.svg" alt="my linkedin" />
+            <img class="h-8" src="img/linkedin-icon.svg" alt="my linkedin" />
           </a>
           <a class="animate-y-md delay-150 duration-500" href="#contact">
-            <img src="img/mail-icon.svg" alt="contact" />
+            <img class="h-8" src="img/mail-icon.svg" alt="contact" />
           </a>
         </div>
       </div>
@@ -191,7 +191,7 @@ require_once "language.php";
 
     <p class="animate-y-sm mt-10 max-w-[710px]"><?php echo text('myWorkText') ?>
     </p>
-    <h2 class="animate-y-md mt-10">Mijn werk <?php echo text('myWorkSubtitle') ?></h2>
+    <h2 class="animate-y-md mt-24"><?php echo text('myWorkSubtitle') ?></h2>
     <div class="mt-10 flex flex-col items-start gap-y-8">
       <div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
         <div class="flex flex-col items-start">

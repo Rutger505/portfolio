@@ -914,10 +914,6 @@ p {
   display: inline-flex;
 }
 
-.\!hidden {
-  display: none !important;
-}
-
 .hidden {
   display: none;
 }

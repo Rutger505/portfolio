@@ -1,6 +1,6 @@
 <?php
 
-require_once "language.php";
+//require_once "language.php";
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,8 @@ require_once "language.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="<? echo text('description') ?>" />
+  <meta name="description" content="<? //echo text('description') 
+                                    ?>" />
   <title>Rutger Pronk</title>
   <link rel="stylesheet" href="style/main.css" />
   <script src="scripts/smoothNavigation.js" defer></script>

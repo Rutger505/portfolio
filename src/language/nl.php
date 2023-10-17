@@ -38,5 +38,5 @@ $text = [
     'contactFormSubject' => 'Onderwerp',
     'contactFormMessage' => 'Bericht',
     'contactFormSubmit' => 'Verstuur email',
-    'contactFormConstruction' => 'Nog onder constructie!',
+    'contactFormConstruction' => 'In constructie!',
 ];

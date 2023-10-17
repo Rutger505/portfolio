@@ -894,6 +894,10 @@ p {
   margin-top: 2rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -912,10 +916,6 @@ p {
 
 .inline-flex {
   display: inline-flex;
-}
-
-.\!hidden {
-  display: none !important;
 }
 
 .hidden {
@@ -1020,6 +1020,10 @@ p {
   max-width: 572px;
 }
 
+.max-w-\[700px\] {
+  max-width: 700px;
+}
+
 .max-w-\[710px\] {
   max-width: 710px;
 }
@@ -1098,10 +1102,6 @@ p {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.resize {
-  resize: both;
 }
 
 .flex-row {

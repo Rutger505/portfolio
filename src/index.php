@@ -2,6 +2,11 @@
 
 require_once "language.php";
 
+$lag = 0;
+if (isset($_GET['lag'])) {
+  $lag = $_GET['lag'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,9 @@ require_once "language.php";
     <img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up" />
   </a>
 
-  <div id="background-blur" class="absolute left-0 top-0 -z-10 h-full w-full bg-blur bg-cover bg-center bg-no-repeat blur-background"></div>
+  <?php if ($lag == 0) : ?>
+    <div id="background-blur" class="absolute left-0 top-0 -z-10 h-full w-full bg-blur bg-cover bg-center bg-no-repeat blur-background"></div>
+  <?php endif ?>
 
   <header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-500 md:bg-transparent md:backdrop-blur">
     <div class="flex h-full items-center justify-between px-spacing">
@@ -322,9 +329,13 @@ require_once "language.php";
   <script src="scripts/underlineHeader.js"></script>
   <script src="scripts/copyEmail.js"></script>
   <script src="scripts/toTopButton.js"></script>
-  <script src="scripts/animateOnScroll.js"></script>
+  <?php if ($lag <= 1) : ?>
+    <script src="scripts/animateOnScroll.js"></script>
+  <?php endif ?>
   <script src="scripts/dropdownHeader.js"></script>
-  <script src="scripts/backgroundBlur.js"></script>
+  <?php if ($lag == 0) : ?>
+    <script src="scripts/backgroundBlur.js"></script>
+  <?php endif ?>
 </body>
 
 </html>

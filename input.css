@@ -4,30 +4,31 @@
 
 @layer base {
   /* font and color */
-  header h1 {
-    @apply text-fontHeaderLogo font-bold text-header;
-  }
-
   header a,
   header p {
     @apply text-fontHeader text-header;
   }
 
-  body {
-    @apply bg-primary;
+  header {
+    @apply text-header;
   }
 
-  h1 {
-    @apply text-xl font-bold text-text;
-  }
-
-  h2 {
-    @apply text-aroundXl text-text;
+  h2,
+  h2,
+  h3,
+  h4,
+  h5,
+  span,
+  li,
+  input,
+  textarea,
+  button {
+    @apply text-text;
   }
 
   a,
   a span {
-    @apply text-link text-text;
+    @apply text-link;
   }
 
   p {

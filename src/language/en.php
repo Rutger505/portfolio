@@ -1,15 +1,19 @@
 <?php
 
 $text = [
+    // General
     'description' => 'The portfolio of Rutger Pronk.',
+    // Header
     'aboutMeHeader' => 'About me',
     'myWorkHeader' => 'My work',
     'contactHeader' => 'Contact',
+    // Landing page
     'landingPageText' => 'Hi, I\'m Rutger from the Netherlands',
-    'exploreProjects' => 'Explore my projects',
+    // About me
     'aboutMeTitle' => 'Who am I?',
     'aboutMeText1' => 'My name is Rutger Pronk, and I am currently studying to become a Software Developer in the Netherlands. I am currently a first year student at ROC Nijmegen.',
     'aboutMeText2' => 'I have a strong passion for programming and software development, with a dedicated focus on improving my skills in Java and C#. Additionally, I am actively learning both front-end and back-end web development.',
+    // My work
     'myWorkTitle' => 'What can I do?',
     'myWorkText' => 'I enjoy working with Java, C#, and web development (HTML, CSS, JavaScript, PHP, SQL). I have collaborated on projects, improving teamwork and communication skills. I use Git/GitHub for version control and Scrum/Trello for project management. Here are some notable projects showcasing my skills.',
     'myWorkSubtitle' => 'My work',
@@ -23,12 +27,15 @@ $text = [
     'experiencesTitle' => 'My experiences',
     'experiencesFuture' => 'Future',
     'experiencesFutureStudy' => 'Pursuing career',
-    'experiencesFutureStudyLocation' => 'Another School - HBO',
-    'experiencesPresent' => '2022 - Present',
-    'experiencesROCSoftwareDeveloper' => 'Student Software Developer',
+    'experiencesFutureStudyLocation' => 'Different School - HBO',
+    'experiencesEndROCSoftwareDeveloper' => 'Graduate study Software Developer',
     'experiencesROCSoftwareDeveloperLocation' => 'ROC Nijmegen Heyendaalseweg - MBO',
-    'experiencesGemini' => 'Intern learning embedded',
+    'experiencesPresent' => '2023 - Present',
+    'experiencesGemini' => 'Intern at Gemini Embedded Technologies',
     'experiencesGeminiLocation' => 'Gemini Embedded Technologies',
+    'experiences2022' => '2022',
+    'experiencesStartROCSoftwareDeveloper' => 'Start studying Software Developer',
+    // Contact
     'contactTitle' => 'Talk to me',
     'contactText' => 'Do not hesitate to contact me through the form here or by direct email on',
     'contactTextEmailCopy' => 'Email copied',

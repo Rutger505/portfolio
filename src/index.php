@@ -18,7 +18,7 @@ require_once "language.php";
 	<link rel="icon" href="img/website-icon.png" type="image/png" />
 </head>
 
-<body>
+<body class="bg-primary">
 	<!-- fixed -->
 	<a id="to-top-button" class="fixed bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-secondary opacity-0 transition-all" href="#home">
 		<img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up" />
@@ -27,7 +27,7 @@ require_once "language.php";
 	<header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-500 md:bg-transparent md:backdrop-blur ">
 		<div class="flex h-full items-center justify-between max-w-[2500px] mx-spacing too-big:m-auto">
 			<a class="p-2 duration-150 hover:opacity-70" href="#home">
-				<h1><span class="text-accent">R</span>utger</h1>
+				<h1 class=" text-fontHeaderLogo font-bold"><span class="text-accent">R</span>utger</h1>
 			</a>
 			<!-- normal nav -->
 			<nav>
@@ -131,24 +131,15 @@ require_once "language.php";
 
 	<!-- scroll -->
 	<main id="home" class="mx-spacing flex min-h-screen  flex-col max-w-[2500px] too-big:m-auto">
-		<h2 class="animate-y-md mt-60 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
+		<h2 class="animate-y-md mt-44 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
 		<div class="flex justify-between">
-			<h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px]">
+			<h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px] font-bold text-text">
 				<?php echo text('landingPageText') ?>
 			</h1>
 
-			<img class="hidden lg:block rounded-full h-96 -translate-y-10" src="img/personal-photo.webp" alt="personal photo">
+			<img class="hidden lg:block rounded-full h-96 -translate-y-20" src="img/personal-photo.webp" alt="personal photo">
 		</div>
 		<script src="scripts/highlightRutger.js"></script>
-
-
-
-		<div class="animate-y-lg mt-36 delay-300 lg:mt-40 xl:mt-40">
-			<a class="w-fit" href="#my-work">
-				<p class="inline-block text-link text-text"><?php echo text('exploreProjects') ?></p>
-				<img class="ml-1 inline-block" src="img/arrow-down-icon.svg" alt="arrow down" />
-			</a>
-		</div>
 
 		<div class="flex-1"></div>
 
@@ -160,7 +151,7 @@ require_once "language.php";
 	</main>
 
 	<section id="about-me" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
-		<h1><?php echo text('aboutMeTitle') ?></h1>
+		<h2 class="text-xl font-bold"><?php echo text('aboutMeTitle') ?></h2>
 		<div class="mt-24 flex flex-wrap gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
 			<div class="flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">
 				<img class="w-full max-w-[20rem] rounded-full bg-secondary sm:h-80 sm:w-80" src="img/personal-photo.webp" alt="personal-photo" />
@@ -188,15 +179,15 @@ require_once "language.php";
 	</section>
 
 	<section id="my-work" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
-		<h1> <?php echo text('myWorkTitle') ?> </h1>
+		<h2 class="text-xl font-bold"> <?php echo text('myWorkTitle') ?> </h2>
 
 		<p class="animate-y-sm mt-10 max-w-[710px]"><?php echo text('myWorkText') ?>
 		</p>
-		<h2 class="animate-y-md mt-24"><?php echo text('myWorkSubtitle') ?></h2>
+		<h3 class="animate-y-md mt-24 text-aroundXl"><?php echo text('myWorkSubtitle') ?></h3>
 		<div class="mt-10 flex flex-col items-start gap-y-8">
 			<div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
 				<div class="flex flex-col items-start">
-					<h2><?php echo text('usefulAutoclickerTitle') ?></h2>
+					<h4 class="text-[30px]"><?php echo text('usefulAutoclickerTitle') ?></h4>
 					<p class="mt-5 max-w-[430px]"><?php echo text('usefulAutoclickerText') ?>
 					</p>
 					<div class="flex-1"></div>
@@ -211,7 +202,7 @@ require_once "language.php";
 			</div>
 			<div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
 				<div class="flex flex-col items-start">
-					<h2><?php echo text('travelAgencyTitle') ?></h2>
+					<h4 class="text-[30px]"><?php echo text('travelAgencyTitle') ?></h4>
 					<p class="mt-5 max-w-[430px]">
 						<?php echo text('travelAgencyText') ?>
 					</p>
@@ -227,7 +218,7 @@ require_once "language.php";
 			</div>
 			<div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
 				<div class="flex flex-col items-start">
-					<h2><?php echo text('noTimeToDieTitle') ?></h2>
+					<h4 class="text-[30px]"><?php echo text('noTimeToDieTitle') ?></h4>
 					<p class="mt-5 max-w-[430px]"><?php echo text('noTimeToDieText') ?>
 					</p>
 					<div class="flex-1"></div>
@@ -241,31 +232,45 @@ require_once "language.php";
 				<img class="mt-7 max-h-[320px]" src="img/no-time-to-die.webp" alt="useful autoclicker" />
 			</div>
 		</div>
-		<h2 class="animate-y-md mt-20"><?php echo text('experiencesTitle') ?></h2>
+		<h3 class="animate-y-md mt-20 text-aroundXl"><?php echo text('experiencesTitle') ?></h3>
 		<div class="mt-10 flex">
 			<div class="w-2 flex-shrink-0 rounded-full bg-secondary"></div>
 			<div class="flex flex-col gap-y-14">
 				<div class="ml-[-12px] flex items-start gap-x-10">
-					<div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
-					<div class="flex flex-col gap-2">
+					<div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent mt-[6px]"></div>
+					<div class="flex flex-col gap-4">
 						<p class="my-work-experiences-times mb-2"><?php echo text('experiencesFuture') ?> </p>
 						<div>
-							<h2 class="animate-y leading-tight"><?php echo text('experiencesFutureStudy') ?></h2>
-							<p class="animate-y delay-75"><?php echo text('experiencesFutureStudyLocation') ?></p>
+							<h4 class="animate-y leading-tight text-[30px]"><?php echo text('experiencesFutureStudy') ?></h4>
+							<p class="mt-1 animate-y delay-75"><?php echo text('experiencesFutureStudyLocation') ?></p>
+						</div>
+						<div>
+							<h4 class="animate-y leading-tight text-[30px]"><?php echo text('experiencesEndROCSoftwareDeveloper') ?></h4>
+							<p class="mt-1 animate-y my-work-experiences-location delay-75"><?php echo text('experiencesROCSoftwareDeveloperLocation') ?></p>
 						</div>
 					</div>
 				</div>
 				<div class="ml-[-12px] flex items-start gap-x-10">
-					<div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent"></div>
-					<div class="flex flex-col gap-2">
+					<div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent mt-[6px]"></div>
+					<div>
 						<p class="mb-2 text-accent"><?php echo text('experiencesPresent') ?></p>
-						<div>
-							<h2 class="animate-y leading-tight"><?php echo text('experiencesROCSoftwareDeveloper') ?></h2>
-							<p class="animate-y my-work-experiences-location delay-75"><?php echo text('experiencesROCSoftwareDeveloperLocation') ?></p>
+						<div class="flex flex-col gap-6 mt-4">
+							<div>
+								<h4 class="animate-y my-work-experiences-explanation leading-tight  delay-75 text-[30px]"><?php echo text('experiencesGemini') ?></h4>
+								<p class="mt-1 animate-y my-work-experiences-location delay-150"><?php echo text('experiencesGeminiLocation') ?></p>
+							</div>
 						</div>
-						<div>
-							<h2 class="animate-y my-work-experiences-explanation leading-tight delay-75"><?php echo text('experiencesGemini') ?></h2>
-							<p class="animate-y my-work-experiences-location delay-150"><?php echo text('experiencesGeminiLocation') ?></p>
+					</div>
+				</div>
+				<div class="ml-[-12px] flex items-start gap-x-10">
+					<div class="h-4 w-4 flex-shrink-0 rounded-full bg-accent mt-[6px]"></div>
+					<div>
+						<p class="mb-2"><?php echo text('experiences2022') ?></p>
+						<div class="flex flex-col gap-6 mt-4">
+							<div>
+								<h4 class="animate-y leading-tight text-[30px]"><?php echo text('experiencesStartROCSoftwareDeveloper') ?></h4>
+								<p class="mt-1 animate-y my-work-experiences-location delay-75"><?php echo text('experiencesROCSoftwareDeveloperLocation') ?></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -274,8 +279,8 @@ require_once "language.php";
 	</section>
 
 	<section id="contact" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
-		<h1><?php echo text('contactTitle') ?></h1>
-		<div class="flex flex-wrap items-start justify-between gap-7 lg:flex-nowrap">
+		<h2 class="text-xl font-bold"><?php echo text('contactTitle') ?></h2>
+		<div class="flex flex-wrap items-start justify-between gap-7 lg:flex-nowrap mt-4">
 			<div class="flex flex-wrap items-start justify-start gap-0">
 				<div class="animate-y max-w-[750px]">
 					<p class="inline"><?php echo text('contactText') ?></p>
@@ -292,7 +297,7 @@ require_once "language.php";
 			</div>
 
 			<div class="animate-y-sm flex min-w-[80%] flex-col rounded-lg bg-secondary p-7 delay-300 sm:min-w-[370px]">
-				<h2><?php echo text('contactFormTitle') ?></h2>
+				<h3><?php echo text('contactFormTitle') ?></h3>
 				<input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="<?php echo text('contactFormName') ?>" />
 				<input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="<?php echo text('contactFormEmail') ?>" />
 				<input class="mt-6 w-full border-b-2 border-detail bg-transparent px-1 pb-2 text-text outline-none" type="text" placeholder="<?php echo text('contactFormSubject') ?>" />

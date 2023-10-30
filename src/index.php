@@ -24,8 +24,8 @@ require_once "language.php";
 		<img class="h-6" src="img/arrow-up-icon.svg" alt="arrow up" />
 	</a>
 
-	<header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-500 md:bg-transparent md:backdrop-blur">
-		<div class="flex h-full items-center justify-between px-spacing">
+	<header class="fixed top-0 z-20 h-24 w-full bg-secondary transition-all duration-500 md:bg-transparent md:backdrop-blur ">
+		<div class="flex h-full items-center justify-between max-w-[2500px] mx-spacing too-big:m-auto">
 			<a class="p-2 duration-150 hover:opacity-70" href="#home">
 				<h1><span class="text-accent">R</span>utger</h1>
 			</a>
@@ -130,7 +130,7 @@ require_once "language.php";
 	</header>
 
 	<!-- scroll -->
-	<main id="home" class="mx-spacing flex min-h-screen flex-col">
+	<main id="home" class="mx-spacing flex min-h-screen  flex-col max-w-[2500px] too-big:m-auto">
 		<h2 class="animate-y-md mt-60 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
 		<div class="flex justify-between">
 			<h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px]">
@@ -150,8 +150,6 @@ require_once "language.php";
 			</a>
 		</div>
 
-		<div class="bg-transparent"></div>
-
 		<div class="flex-1"></div>
 
 		<div class="animate-fade-in my-14 hidden justify-center delay-1000 md:flex">
@@ -161,7 +159,7 @@ require_once "language.php";
 		</div>
 	</main>
 
-	<section id="about-me" class="mx-spacing py-24 mdlg:py-32">
+	<section id="about-me" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
 		<h1><?php echo text('aboutMeTitle') ?></h1>
 		<div class="mt-24 flex flex-wrap gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
 			<div class="flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">
@@ -189,7 +187,7 @@ require_once "language.php";
 		</div>
 	</section>
 
-	<section id="my-work" class="mx-spacing py-24 mdlg:py-32">
+	<section id="my-work" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
 		<h1> <?php echo text('myWorkTitle') ?> </h1>
 
 		<p class="animate-y-sm mt-10 max-w-[710px]"><?php echo text('myWorkText') ?>
@@ -275,7 +273,7 @@ require_once "language.php";
 		</div>
 	</section>
 
-	<section id="contact" class="mx-spacing py-24 mdlg:py-32">
+	<section id="contact" class="mx-spacing py-24 mdlg:py-32 max-w-[2500px] too-big:m-auto">
 		<h1><?php echo text('contactTitle') ?></h1>
 		<div class="flex flex-wrap items-start justify-between gap-7 lg:flex-nowrap">
 			<div class="flex flex-wrap items-start justify-start gap-0">

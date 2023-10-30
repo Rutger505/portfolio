@@ -6,7 +6,7 @@ include_once "language/" . $language . ".php";
 
 function getLanguage()
 {
-    $language = "en";
+    $language = "nl";
 
     $domain = $_SERVER['HTTP_HOST'];
     $domain = trim($domain);

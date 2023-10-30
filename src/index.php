@@ -132,10 +132,15 @@ require_once "language.php";
   <!-- scroll -->
   <main id="home" class="mx-spacing flex min-h-screen flex-col">
     <h2 class="animate-y-md mt-60 text-mobileAroundXl text-text delay-75 xs:text-aroundXl lg:mt-80">&lt;/&gt; Software-Dev</h2>
-    <h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px]">
-      <?php echo text('landingPageText') ?>
-    </h1>
+    <div class="flex justify-between">
+      <h1 id="home-text" class="animate-y text-mobileXl leading-tight xs:text-xl max-w-[700px]">
+        <?php echo text('landingPageText') ?>
+      </h1>
+
+      <img class="hidden lg:block rounded-full h-96 -translate-y-10" src="img/personal-photo.webp" alt="personal photo">
+    </div>
     <script src="scripts/highlightRutger.js"></script>
+
 
 
     <div class="animate-y-lg mt-36 delay-300 lg:mt-40 xl:mt-40">
@@ -204,7 +209,7 @@ require_once "language.php";
             </svg>
           </a>
         </div>
-        <img class="mt-7 max-h-[320px]" src="img/useful-autoclicker-3.0-previeuw.webp" alt="useful autoclicker" />
+        <img class="mt-7 max-h-[320px]" src="img/useful-autoclicker-3.0-previeuw.webp" alt="useful-autoclicker" />
       </div>
       <div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
         <div class="flex flex-col items-start">
@@ -220,7 +225,7 @@ require_once "language.php";
             </svg>
           </a>
         </div>
-        <img class="mt-7 max-h-[320px]" src="img/reisbureau.webp" alt="useful autoclicker" />
+        <img class="mt-7 max-h-[320px]" src="img/reisbureau.webp" alt="reisbureau" />
       </div>
       <div class="animate-y-sm flex h-fit flex-wrap justify-between gap-x-7 rounded-lg bg-secondary px-10 py-10 lg:px-20">
         <div class="flex flex-col items-start">

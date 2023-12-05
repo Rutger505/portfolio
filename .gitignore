@@ -1,4 +1,2 @@
-# This file is not used yet
-docker-compose.yml
-
 node_modules/
+.idea

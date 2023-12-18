@@ -7,12 +7,17 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    backgroundColor: {
+    colors: {
       primary: "#121125",
       secondary: "#0E0E21",
       accent: "#FF365A",
-      text: "#EDEDED",
+      textPrimary: "#EDEDED",
       textSecondary: "#CAC8DC"
+    },
+    extend: {
+      padding: {
+        spacing: "10%"
+      }
     }
   },
   plugins: []

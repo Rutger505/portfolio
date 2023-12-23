@@ -12,7 +12,12 @@ const config: Config = {
       secondary: "#0E0E21",
       accent: "#FF365A",
       textPrimary: "#EDEDED",
-      textSecondary: "#CAC8DC"
+      textSecondary: "#CAC8DC",
+
+      transparent: "transparent",
+      red: "#FF0000",
+      green: "#00FF00",
+      blue: "#0000FF",
     },
     extend: {
       padding: {

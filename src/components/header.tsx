@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { animateScroll } from "react-scroll";
 import Link from "next/link";
+import LanguageIcon from "@/components/icons/languageIcon";
 
 export default function Header() {
   const header = useRef<HTMLDivElement>(null);
@@ -18,6 +19,10 @@ export default function Header() {
       smooth: "easeInOutCubic",
       duration: 500,
     });
+  }
+
+  function changeLanguage(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    alert("To be implemented");
   }
 
   return (
@@ -70,6 +75,20 @@ export default function Header() {
           onClick={scrollSmooth}
         >
           <p>Contact</p>
+          <span className="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+        </Link>
+        {/*  Make link for switch language*/}
+        <Link
+          href={"/"}
+          className={
+            "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
+          }
+          onClick={changeLanguage}
+        >
+          <div className={"flex items-center"}>
+            <LanguageIcon className={" h-5 text-textPrimary"} />
+            <p className={"ml-2 "}>EN</p>
+          </div>
           <span className="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
         </Link>
       </nav>

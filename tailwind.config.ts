@@ -19,6 +19,18 @@ const config: Config = {
       green: "#00FF00",
       blue: "#0000FF",
     },
+    screens: {
+      xs: '400px',
+      sm: '640px',
+      md: '768px',
+      mdlg: '850px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      'too-big': '3266px',
+
+      aboutMe: '520px',
+    },
     extend: {
       padding: {
         spacing: "10%"

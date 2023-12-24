@@ -16,7 +16,7 @@ export default function Footer() {
         >
           <LinkedinIcon className={"h-7 text-accent"} />
         </Link>
-        <Link href="#contact">
+        <Link href={"#contact"}>
           <MailIcon className={"h-7 text-accent"} />
         </Link>
       </div>

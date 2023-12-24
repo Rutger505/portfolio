@@ -1,45 +1,22 @@
 import Header from "@/components/header";
+import Footer from "@/components/footer";
+import mePicture from "../../public/me.webp";
+import Image from "next/image";
+import LanguageIcon from "@/components/icons/languageIcon";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <section
-          id={"home"}
-          className="flex flex-col items-center justify-center"
-        >
-          <h1 className="text-8xl font-bold text-textPrimary">
-            Hi, I'm Rutger
-          </h1>
-          <div className="h-[1200px] w-full bg-accent" />
-        </section>
-        <section
-          id={"about"}
-          className="flex flex-col items-center justify-center"
-        >
-          <h1 className="text-8xl font-bold text-textPrimary">Hi, I'm about</h1>
-          <div className="h-[1200px] w-full bg-accent" />
-        </section>
-        <section
-          id={"projects"}
-          className="flex flex-col items-center justify-center"
-        >
-          <h1 className="text-8xl font-bold text-textPrimary">
-            Hi, I'm projects
-          </h1>
-          <div className="h-[1200px] w-full bg-accent" />
-        </section>
-        <section
-          id={"contact"}
-          className="flex flex-col items-center justify-center"
-        >
-          <h1 className="text-8xl font-bold text-textPrimary">
-            Hi, I'm contact
-          </h1>
-          <div className="h-[1200px] w-full bg-accent" />
-        </section>
+      <main className=" px-spacing ">
+        <Image
+          className="h-96 w-96 rounded-full"
+          src={mePicture}
+          alt={"A picture of me"}
+        />
+        <LanguageIcon className={"h-8 text-textPrimary"} />
       </main>
+      <Footer />
     </>
   );
 }

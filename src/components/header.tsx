@@ -26,12 +26,11 @@ export default function Header() {
       className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur"
     >
       <Link
-        href="#home"
+        href={"#home"}
         className={"cursor-pointer text-3xl font-bold text-textPrimary"}
         onClick={scrollSmooth}
       >
-        <span className={"text-accent"}>R</span>
-        utger
+        <span className={"text-accent"}>R</span>utger
       </Link>
 
       <nav className="flex gap-x-7">

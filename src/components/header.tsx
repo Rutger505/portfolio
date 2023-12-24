@@ -15,7 +15,7 @@ export default function Header() {
     const yTarget = target.getBoundingClientRect().top + window.scrollY;
 
     animateScroll.scrollTo(yTarget, {
-      smooth: true,
+      smooth: "easeInOutCubic",
       duration: 500,
     });
   }

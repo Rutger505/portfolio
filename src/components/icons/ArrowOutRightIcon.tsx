@@ -1,10 +1,6 @@
-interface ArrowOutRightIconProps {
-  className?: string;
-}
+import { IconProps } from "@/components/icons/IconProps";
 
-export function ArrowOutRightIcon({
-  className,
-}: Readonly<ArrowOutRightIconProps>) {
+export function ArrowOutRightIcon({ className }: Readonly<IconProps>) {
   return (
     <svg
       className={`${className}`}

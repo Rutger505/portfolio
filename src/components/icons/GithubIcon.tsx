@@ -1,8 +1,6 @@
-interface ComponentProps {
-  className?: string;
-}
+import { IconProps } from "@/components/icons/IconProps";
 
-export default function GithubIcon({ className }: Readonly<ComponentProps>) {
+export default function GithubIcon({ className }: Readonly<IconProps>) {
   return (
     <svg
       className={className}

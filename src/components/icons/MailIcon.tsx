@@ -1,7 +1,6 @@
-interface ComponentProps {
-  className?: string;
-}
-export default function MailIcon({ className }: Readonly<ComponentProps>) {
+import { IconProps } from "@/components/icons/IconProps";
+
+export default function MailIcon({ className }: Readonly<IconProps>) {
   return (
     <svg
       className={className}

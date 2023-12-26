@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ArrowDownIcon from "@/components/icons/arrowDownIcon";
+import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 
 export default function LandingPage() {
   return (

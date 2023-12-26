@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import { animateScroll } from "react-scroll";
 import Link from "next/link";
-import LanguageIcon from "@/components/icons/languageIcon";
+import LanguageIcon from "./icons/LanguageIcon";
 
 export default function Header() {
-  const header = useRef<HTMLDivElement>(null);
-
   function scrollSmooth(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
 
@@ -21,15 +19,12 @@ export default function Header() {
     });
   }
 
-  function changeLanguage(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  function changeLanguage() {
     alert("To be implemented");
   }
 
   return (
-    <header
-      ref={header}
-      className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur"
-    >
+    <header className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur">
       <Link
         href={"#home"}
         className={"cursor-pointer text-3xl font-bold text-textPrimary"}

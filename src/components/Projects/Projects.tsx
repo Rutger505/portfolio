@@ -2,6 +2,8 @@ import AutoclickerImage from "../../../public/useful-autoclicker-3.0-previeuw.we
 import TravelAgencyImage from "../../../public/travel-agency.webp";
 import NoTimeToDieImage from "../../../public/no-time-to-die.webp";
 import ProjectCard from "@/components/Projects/ProjectCard";
+import ExperienceTreeBase from "@/components/Projects/ExperienceTreeBase";
+import ExperienceTime from "@/components/Projects/ExperienceTime";
 
 export default function Projects() {
   return (
@@ -41,6 +43,10 @@ export default function Projects() {
           link={"https://github.com/Rutger505/Gamejam"}
         />
       </div>
+      <h3 className="mt-10 text-3xl  text-textPrimary">Experiences</h3>
+      <ExperienceTreeBase>
+        <ExperienceTime />
+      </ExperienceTreeBase>
     </section>
   );
 }

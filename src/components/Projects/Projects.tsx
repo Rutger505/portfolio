@@ -4,6 +4,7 @@ import NoTimeToDieImage from "../../../public/no-time-to-die.webp";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import ExperienceTreeBase from "@/components/Projects/ExperienceTreeBase";
 import ExperienceTime from "@/components/Projects/ExperienceTime";
+import Experience from "@/components/Projects/Experience";
 
 export default function Projects() {
   return (
@@ -43,9 +44,30 @@ export default function Projects() {
           link={"https://github.com/Rutger505/Gamejam"}
         />
       </div>
-      <h3 className="mt-10 text-3xl  text-textPrimary">Experiences</h3>
+      <h3 className="mt-10 text-3xl text-textPrimary">Experiences</h3>
       <ExperienceTreeBase>
-        <ExperienceTime />
+        <ExperienceTime time={"Future"}>
+          <Experience
+            title={"Pursuing career"}
+            location={"Different School - HBO"}
+          />
+          <Experience
+            title={"Graduate study Software Developer"}
+            location={"ROC Nijmegen Heyendaalseweg - MBO"}
+          />
+        </ExperienceTime>
+        <ExperienceTime time={"2023"} present>
+          <Experience
+            title={"Intern at Gemini Embedded Technologies"}
+            location={"Gemini Embedded Technologies"}
+          />
+        </ExperienceTime>
+        <ExperienceTime time={"2022"}>
+          <Experience
+            title={"Start studying Software Developer\n"}
+            location={"ROC Nijmegen Heyendaalseweg - MBO"}
+          />
+        </ExperienceTime>
       </ExperienceTreeBase>
     </section>
   );

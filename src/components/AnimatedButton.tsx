@@ -1,10 +1,12 @@
-import { ArrowOutRightIcon } from "@/components/icons/ArrowOutRightIcon";
+import ArrowOutRightIcon from "@/components/icons/ArrowOutRightIcon";
 
 interface AnimatedButtonProps {
   text: string;
 }
 
-export function AnimatedButton({ text }: Readonly<AnimatedButtonProps>) {
+export default function AnimatedButton({
+  text,
+}: Readonly<AnimatedButtonProps>) {
   return (
     <button
       className={

@@ -1,7 +1,7 @@
 import AutoclickerImage from "../../../public/useful-autoclicker-3.0-previeuw.webp";
 import TravelAgencyImage from "../../../public/travel-agency.webp";
 import NoTimeToDieImage from "../../../public/no-time-to-die.webp";
-import { ProjectCard } from "@/components/Projects/ProjectCard";
+import ProjectCard from "@/components/Projects/ProjectCard";
 
 export default function Projects() {
   return (
@@ -15,7 +15,7 @@ export default function Projects() {
         showcasing my skills.
       </p>
       <h3 className="mt-10 text-3xl  text-textPrimary">Projects</h3>
-      <div className="mt-7  flex flex-col items-start gap-y-5">
+      <div className="mt-7  flex flex-col items-start gap-y-8">
         <ProjectCard
           title={"Useful-Autoclicker"}
           description={

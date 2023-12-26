@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AnimatedButton } from "@/components/AnimatedButton";
+import AnimatedButton from "@/components/AnimatedButton";
 import Image, { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   link: string;
 }
 
-export function ProjectCard({
+export default function ProjectCard({
   title,
   description,
   image,

@@ -23,7 +23,7 @@ export default function LandingPage() {
         </h1>
       </div>
 
-      <Link href={"#about-me"} className={"mb-6"}>
+      <Link href={"#about"} className={"mb-6"}>
         <ArrowDownIcon className={"h-8 animate-bounce text-accent"} />
       </Link>
     </section>

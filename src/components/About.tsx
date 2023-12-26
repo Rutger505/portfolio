@@ -1,13 +1,13 @@
 import mePhoto from "../../public/me.webp";
 import Image from "next/image";
 
-export default function AboutMe() {
+export default function About() {
   return (
     <section
-      id="about-me"
-      className="mx-spacing max-w-[2500px] py-24 mdlg:py-32 too-big:m-auto"
+      id="about"
+      className="max-w-[2500px] py-24 mdlg:py-32 too-big:m-auto"
     >
-      <h2 className="text-5xl font-bold text-textPrimary">Wie ben ik?</h2>
+      <h2 className="text-5xl font-bold text-textPrimary">Who am I?</h2>
       <div className="mt-24 flex flex-wrap items-center gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
         <div className="flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">
           <Image
@@ -16,7 +16,7 @@ export default function AboutMe() {
             alt={"A picture of me"}
           />
         </div>
-        <div className="mt-8 max-w-[572px] flex-shrink text-textSecondary delay-150 sm:min-w-[350px]">
+        <div className="mt-8 max-w-lg flex-shrink text-textSecondary delay-150 sm:min-w-[350px]">
           <p>
             My name is Rutger Pronk, and I am studying Software Development at
             ROC Nijmegen in the Netherlands. I am currently a second year

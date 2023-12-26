@@ -1,7 +1,8 @@
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import AboutMe from "@/components/aboutMe";
-import LandingPage from "@/components/landingPage";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import About from "@/components/About";
+import LandingPage from "@/components/LandingPage";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Header />
       <main className=" px-spacing ">
         <LandingPage />
-        <AboutMe />
+        <About />
+        <Projects />
       </main>
       <Footer />
     </>

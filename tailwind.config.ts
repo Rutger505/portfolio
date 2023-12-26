@@ -27,7 +27,7 @@ const config: Config = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
-      'too-big': '3266px',
+      'too-big': '2800px',
 
       aboutMe: '520px',
     },

@@ -8,7 +8,7 @@ import Experience from "@/components/Projects/Experience";
 
 export default function Projects() {
   return (
-    <section>
+    <section id={"projects"} className={"py-24 too-big:py-32"}>
       <h2 className="text-5xl font-bold text-textPrimary">What can i do?</h2>
       <p className="mt-7 max-w-lg text-textSecondary">
         I enjoy working with Java, C#, and web development (HTML, CSS,

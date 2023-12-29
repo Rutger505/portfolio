@@ -34,6 +34,9 @@ const config: Config = {
     extend: {
       padding: {
         spacing: "10%"
+      },
+      margin: {
+        spacing: "10%"
       }
     }
   },

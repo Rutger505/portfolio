@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className=" px-spacing ">
+      <main className=" mx-spacing max-w-[2300px] too-big:mx-auto ">
         <LandingPage />
         <About />
         <Projects />

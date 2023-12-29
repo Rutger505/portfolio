@@ -3,10 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="max-w-[2500px] py-24 mdlg:py-32 too-big:m-auto"
-    >
+    <section id="about" className="py-24 too-big:py-32">
       <h2 className="text-5xl font-bold text-textPrimary">Who am I?</h2>
       <div className="mt-24 flex flex-wrap items-center gap-x-12 gap-y-10 mdlg:flex-nowrap lg:gap-x-24">
         <div className="flex flex-wrap items-center justify-center gap-10 md:flex-shrink-0 mdlg:flex-col mdlg:flex-nowrap">

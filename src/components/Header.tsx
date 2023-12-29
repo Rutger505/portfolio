@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Header() {
   const scrollAnimation = "easeInOutCubic";
-  const scrollDuration = 500;
+  const scrollDuration = 700;
   const hideUnderlineClass = "w-0";
   const showUnderlineClass = "w-full";
   const hoverUnderlineClass = "group-hover:w-1/2";

@@ -8,10 +8,58 @@ import Link from "next/link";
 export default function Header() {
   const scrollAnimation = "easeInOutCubic";
   const scrollDuration = 500;
+  const hideUnderlineClass = "w-0";
+  const showUnderlineClass = "w-full";
+  const hoverUnderlineClass = "group-hover:w-1/2";
 
   function changeLanguage() {
     alert("To be implemented"); // TODO Implement language change
   }
+
+  function hideUnderlines(underlines: NodeListOf<Element>) {
+    underlines.forEach((underline) => {
+      underline.classList.add(hideUnderlineClass);
+      underline.classList.add(hoverUnderlineClass);
+      underline.classList.remove(showUnderlineClass);
+    });
+  }
+
+  function showUnderline(underline: Element) {
+    underline.classList.add(showUnderlineClass);
+    underline.classList.remove(hoverUnderlineClass);
+    underline.classList.remove(hideUnderlineClass);
+  }
+
+  function getCurrentSectionIndex(
+    sections: HTMLElement[],
+    scrollPosition: number,
+  ): number {
+    const centerOfScreen = scrollPosition + window.innerHeight / 2;
+
+    return sections.findIndex((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      return centerOfScreen >= sectionTop && centerOfScreen <= sectionBottom;
+    });
+  }
+
+  function handleLinkUnderline() {
+    // search sections based on a with href starting with #
+    const allSections = document.querySelectorAll("section");
+    const sections = Array.from(allSections).slice(1); // remove landing page
+    const underlines = document.querySelectorAll(".header-underline");
+    const scrollPosition = window.scrollY;
+
+    const currentSection = getCurrentSectionIndex(sections, scrollPosition);
+
+    hideUnderlines(underlines);
+    if (currentSection !== -1) {
+      showUnderline(underlines[currentSection]);
+    }
+  }
+
+  window.addEventListener("scroll", handleLinkUnderline);
 
   return (
     <header className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur">
@@ -38,7 +86,7 @@ export default function Header() {
           <p>About me</p>
           <span
             className={
-              "header-underline group block h-[3px] w-full translate-x-[-101%] cursor-pointer rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"
+              "header-underline block h-1 w-0 rounded-full bg-accent duration-300 ease-in-out group-hover:w-1/2"
             }
           ></span>
         </ScrollLink>
@@ -54,7 +102,7 @@ export default function Header() {
           <p> My work</p>
           <span
             className={
-              "header-underline group block h-[3px] w-full translate-x-[-101%] cursor-pointer rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"
+              "header-underline block h-1 w-0 rounded-full bg-accent duration-300 ease-in-out group-hover:w-1/2"
             }
           ></span>
         </ScrollLink>
@@ -68,7 +116,11 @@ export default function Header() {
           duration={scrollDuration}
         >
           <p>Contact</p>
-          <span className="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+          <span
+            className={
+              "header-underline block h-1 w-0 rounded-full bg-accent duration-300 ease-in-out group-hover:w-1/2"
+            }
+          ></span>
         </ScrollLink>
         <Link
           href={"/"}
@@ -81,7 +133,11 @@ export default function Header() {
             <LanguageIcon className={" h-5 text-textPrimary"} />
             <p className={"ml-2 "}>EN</p>
           </div>
-          <span className="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
+          <span
+            className={
+              "header-underline block h-1 w-0 rounded-full bg-accent duration-300 ease-in-out group-hover:w-1/2"
+            }
+          ></span>
         </Link>
       </nav>
     </header>

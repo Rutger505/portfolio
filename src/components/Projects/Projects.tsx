@@ -45,7 +45,7 @@ export default function Projects() {
         />
       </div>
       <h3 className="mt-10 text-3xl text-textPrimary">Experiences</h3>
-      <ExperienceTreeBase>
+      <ExperienceTreeBase className={"mt-10"}>
         <ExperienceTime time={"Future"}>
           <Experience
             title={"Pursuing career"}
@@ -58,8 +58,12 @@ export default function Projects() {
         </ExperienceTime>
         <ExperienceTime time={"2023"} present>
           <Experience
+            title={"Intern at CheapCargo"}
+            location={"CheapCargo - Nijmegen"}
+          />
+          <Experience
             title={"Intern at Gemini Embedded Technologies"}
-            location={"Gemini Embedded Technologies"}
+            location={"Gemini Embedded Technologies - Arnhem"}
           />
         </ExperienceTime>
         <ExperienceTime time={"2022"}>

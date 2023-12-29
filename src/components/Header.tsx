@@ -1,45 +1,39 @@
 "use client";
 
 import React from "react";
-import { animateScroll } from "react-scroll";
-import Link from "next/link";
 import LanguageIcon from "./icons/LanguageIcon";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 export default function Header() {
-  function scrollSmooth(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-    e.preventDefault();
-
-    const href = e.currentTarget.getAttribute("href")!;
-    const target = document.querySelector(href)!;
-    const yTarget = target.getBoundingClientRect().top + window.scrollY;
-
-    animateScroll.scrollTo(yTarget, {
-      smooth: "easeInOutCubic",
-      duration: 500,
-    });
-  }
+  const scrollAnimation = "easeInOutCubic";
+  const scrollDuration = 500;
 
   function changeLanguage() {
-    alert("To be implemented");
+    alert("To be implemented"); // TODO Implement language change
   }
 
   return (
     <header className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur">
-      <Link
+      <ScrollLink
         href={"#home"}
+        to={"home"}
         className={"cursor-pointer text-3xl font-bold text-textPrimary"}
-        onClick={scrollSmooth}
+        smooth={scrollAnimation}
+        duration={scrollDuration}
       >
         <span className={"text-accent"}>R</span>utger
-      </Link>
+      </ScrollLink>
 
       <nav className="flex gap-x-7">
-        <Link
+        <ScrollLink
           href={"#about"}
+          to={"about"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          onClick={scrollSmooth}
+          smooth={scrollAnimation}
+          duration={scrollDuration}
         >
           <p>About me</p>
           <span
@@ -47,13 +41,15 @@ export default function Header() {
               "header-underline group block h-[3px] w-full translate-x-[-101%] cursor-pointer rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"
             }
           ></span>
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           href={"#projects"}
+          to={"projects"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          onClick={scrollSmooth}
+          smooth={scrollAnimation}
+          duration={scrollDuration}
         >
           <p> My work</p>
           <span
@@ -61,18 +57,19 @@ export default function Header() {
               "header-underline group block h-[3px] w-full translate-x-[-101%] cursor-pointer rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"
             }
           ></span>
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           href={"#contact"}
+          to={"contact"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          onClick={scrollSmooth}
+          smooth={scrollAnimation}
+          duration={scrollDuration}
         >
           <p>Contact</p>
           <span className="header-underline block h-[3px] w-full translate-x-[-101%] rounded-full bg-accent duration-300 group-hover:translate-x-[-50%]"></span>
-        </Link>
-        {/*  Make link for switch language*/}
+        </ScrollLink>
         <Link
           href={"/"}
           className={

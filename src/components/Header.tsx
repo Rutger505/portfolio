@@ -9,7 +9,7 @@ export default function Header() {
   const [activeSectionIndex, setActiveSectionIndex] = useState<number>(-1);
 
   function changeLanguage() {
-    alert("To be implemented"); // TODO Implement language change
+    alert("Language change is not implemented yet");
   }
 
   function handleLinkUnderline() {

@@ -1,6 +1,5 @@
-"use client";
-
-import { Link as ScrollLink } from "react-scroll";
+import React from "react";
+import ScrollLink from "@/components/ScrollLink";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 
 export default function LandingPage() {
@@ -25,13 +24,7 @@ export default function LandingPage() {
         </h1>
       </div>
 
-      <ScrollLink
-        href={"#about"}
-        to={"about"}
-        className={"mb-6"}
-        smooth={"easeInOutCubic"}
-        duration={700}
-      >
+      <ScrollLink href={"#about"} to={"about"} className={"mb-6"}>
         <ArrowDownIcon className={"h-8 animate-bounce text-accent"} />
       </ScrollLink>
     </section>

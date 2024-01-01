@@ -2,12 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import LanguageIcon from "./icons/LanguageIcon";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
+import ScrollLink from "@/components/ScrollLink";
 
 export default function Header() {
-  const scrollAnimation = "easeInOutCubic";
-  const scrollDuration = 700;
   const [activeSectionIndex, setActiveSectionIndex] = useState<number>(-1);
 
   function changeLanguage() {
@@ -43,8 +41,6 @@ export default function Header() {
         href={"#home"}
         to={"home"}
         className={"cursor-pointer text-3xl font-bold text-textPrimary"}
-        smooth={scrollAnimation}
-        duration={scrollDuration}
       >
         <span className={"text-accent"}>R</span>utger
       </ScrollLink>
@@ -56,8 +52,6 @@ export default function Header() {
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          smooth={scrollAnimation}
-          duration={scrollDuration}
         >
           <p>About me</p>
           <span
@@ -72,8 +66,6 @@ export default function Header() {
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          smooth={scrollAnimation}
-          duration={scrollDuration}
         >
           <p> My work</p>
           <span
@@ -88,8 +80,6 @@ export default function Header() {
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
-          smooth={scrollAnimation}
-          duration={scrollDuration}
         >
           <p>Contact</p>
           <span

@@ -112,7 +112,7 @@ export default function ContactForm({
         onBlur={onInputBlur}
       ></textarea>
 
-      <AnimatedButton className={"mt-3 w-fit"} text={"Send email"} />
+      <AnimatedButton className={"mt-3 w-fit"} text={translations.submit} />
       <p className="-mt-3 text-red">In construction!</p>
     </form>
   );

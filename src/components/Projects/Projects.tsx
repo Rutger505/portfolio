@@ -5,71 +5,62 @@ import ProjectCard from "@/components/Projects/ProjectCard";
 import ExperienceTreeBase from "@/components/Projects/ExperienceTreeBase";
 import ExperienceTime from "@/components/Projects/ExperienceTime";
 import Experience from "@/components/Projects/Experience";
+import { useTranslations } from "next-intl";
 
 export default function Projects() {
+  const t = useTranslations("projects");
+
   return (
     <section id={"projects"} className={"py-24 too-big:py-32"}>
-      <h2 className="text-5xl font-bold text-textPrimary">What can i do?</h2>
-      <p className="mt-7 max-w-lg text-textSecondary">
-        I enjoy working with Java, C#, and web development (HTML, CSS,
-        JavaScript, PHP, SQL). I have collaborated on projects, improving
-        teamwork and communication skills. I use Git/GitHub for version control
-        and Scrum/Trello for project management. Here are some notable projects
-        showcasing my skills.
-      </p>
-      <h3 className="mt-10 text-3xl  text-textPrimary">Projects</h3>
+      <h2 className="text-5xl font-bold text-textPrimary">{t("title")}</h2>
+      <p className="mt-7 max-w-lg text-textSecondary">{t("text")}</p>
+      <h3 className="mt-10 text-3xl  text-textPrimary">
+        {t("projects.title")}
+      </h3>
       <div className="mt-7  flex flex-col items-start gap-y-8">
         <ProjectCard
-          title={"Useful-Autoclicker"}
-          description={
-            "A GUI project in development. Originally created in Java, it is now being rewritten in C#. this Autoclicker tool is a project that I've been working on for the past half year."
-          }
+          title={t("projects.usefulAutoclicker.title")}
+          description={t("projects.usefulAutoclicker.text")}
           image={AutoclickerImage}
           link={"https://github.com/Rutger505/Useful-Autoclicker"}
         />
         <ProjectCard
-          title={"Travel Agency"}
-          description={
-            "A project utilizing HTML, CSS, Tailwind CSS, PHP, MySQL, and API integration. I collaborated with another developer for three months to develop this travel agency website."
-          }
+          title={t("projects.travelAgency.title")}
+          description={t("projects.travelAgency.text")}
           image={TravelAgencyImage}
           link={"https://github.com/Rutger505/Reisbureau"}
         />
         <ProjectCard
-          title={"No Time To Die\n"}
-          description={
-            "A game jam project, this is a round-based survival game created in just 16 hours using Gamemaker. I collaborated with a team of 5 members to deliver this game."
-          }
+          title={t("projects.noTimeToDie.title")}
+          description={t("projects.noTimeToDie.text")}
           image={NoTimeToDieImage}
           link={"https://github.com/Rutger505/Gamejam"}
         />
       </div>
-      <h3 className="mt-10 text-3xl text-textPrimary">Experiences</h3>
+      <h3 className="mt-10 text-3xl text-textPrimary">
+        {t("experiences.title")}
+      </h3>
       <ExperienceTreeBase className={"mt-10"}>
-        <ExperienceTime time={"Future"}>
+        <ExperienceTime time={t("experiences.future.title")}>
           <Experience
-            title={"Pursuing career"}
-            location={"Different School - HBO"}
+            title={t("experiences.future.experience1.title")}
+            location={t("experiences.future.experience1.place")}
           />
           <Experience
-            title={"Graduate study Software Developer"}
-            location={"ROC Nijmegen Heyendaalseweg - MBO"}
+            title={t("experiences.future.experience2.title")}
+            location={t("experiences.future.experience2.place")}
           />
         </ExperienceTime>
-        <ExperienceTime time={"2023"} present>
+        <ExperienceTime time={t("experiences.2023.title")} present>
           <Experience
-            title={"Intern at CheapCargo"}
-            location={"CheapCargo - Nijmegen"}
-          />
-          <Experience
-            title={"Intern at Gemini Embedded Technologies"}
-            location={"Gemini Embedded Technologies - Arnhem"}
+            title={t("experiences.2023.experience1.title")}
+            location={t("experiences.2023.experience1.place")}
           />
         </ExperienceTime>
         <ExperienceTime time={"2022"}>
           <Experience
-            title={"Start studying Software Developer\n"}
-            location={"ROC Nijmegen Heyendaalseweg - MBO"}
+            title={t("experiences.2022.experience1.title")}
+            location={t("experiences.2022.experience1.place")}
           />
         </ExperienceTime>
       </ExperienceTreeBase>

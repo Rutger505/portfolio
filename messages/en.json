@@ -29,28 +29,31 @@
     },
     "experiences": {
       "title": "Experiences",
-      "2022": [
-        {
+      "2022": {
+        "title": "2022",
+        "experience1": {
           "title": "Start studying Software Developer",
           "place": "ROC Nijmegen Heyendaalseweg - MBO"
         }
-      ],
-      "2023": [
-        {
+      },
+      "2023": {
+        "title": "2023",
+        "experience1": {
           "title": "Intern at CheapCargo",
           "place": "CheapCargo - Nijmegen"
         }
-      ],
-      "future": [
-        {
-          "title": "Graduate study Software Developer",
-          "place": "ROC Nijmegen Heyendaalseweg - MBO"
-        },
-        {
+      },
+      "future": {
+        "title": "Future",
+        "experience1": {
           "title": "Pursuing career",
           "place": "Different School - HBO"
+        },
+        "experience2": {
+          "title": "Graduate study Software Developer",
+          "place": "ROC Nijmegen Heyendaalseweg - MBO"
         }
-      ]
+      }
     }
   },
   "contact": {

@@ -1,34 +1,11 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ScrollLink from "@/components/ScrollLink";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
+import UnderlineScrollLink from "@/components/UnderlineScrollLink";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
-  const [activeSectionIndex, setActiveSectionIndex] = useState<number>(-1);
-
-  function handleLinkUnderline() {
-    const sections = Array.from(document.querySelectorAll("section"));
-    sections.shift(); // remove landing page
-    const centerOfScreen = window.scrollY + window.innerHeight / 2;
-
-    const currentSectionIndex = sections.findIndex((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionBottom = sectionTop + section.offsetHeight;
-
-      return centerOfScreen >= sectionTop && centerOfScreen <= sectionBottom;
-    });
-
-    setActiveSectionIndex(currentSectionIndex);
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleLinkUnderline);
-
-    return () => {
-      window.removeEventListener("scroll", handleLinkUnderline);
-    };
-  }, []);
+  const t = useTranslations("header");
 
   return (
     <header className="fixed left-0 top-0 flex h-20 w-screen items-center justify-between bg-secondary px-spacing transition-all duration-500 md:bg-transparent md:backdrop-blur">
@@ -41,48 +18,33 @@ export default function Header() {
       </ScrollLink>
 
       <nav className="flex gap-x-7">
-        <ScrollLink
+        <UnderlineScrollLink
           href={"#about"}
           to={"about"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
         >
-          <p>About me</p>
-          <span
-            className={`${
-              activeSectionIndex == 0 ? "w-full" : "w-0 group-hover:w-1/2"
-            } block h-1 rounded-full bg-accent duration-300 ease-in-out `}
-          ></span>
-        </ScrollLink>
-        <ScrollLink
+          <p>{t("about")}</p>
+        </UnderlineScrollLink>
+        <UnderlineScrollLink
           href={"#projects"}
           to={"projects"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
         >
-          <p> My work</p>
-          <span
-            className={`${
-              activeSectionIndex == 1 ? "w-full" : "w-0 group-hover:w-1/2"
-            } block h-1 rounded-full bg-accent duration-300 ease-in-out`}
-          ></span>
-        </ScrollLink>
-        <ScrollLink
+          <p>{t("projects")}</p>
+        </UnderlineScrollLink>
+        <UnderlineScrollLink
           href={"#contact"}
           to={"contact"}
           className={
             "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
           }
         >
-          <p>Contact</p>
-          <span
-            className={`${
-              activeSectionIndex == 2 ? "w-full" : "w-0 group-hover:w-1/2"
-            } block h-1 rounded-full bg-accent duration-300 ease-in-out`}
-          ></span>
-        </ScrollLink>
+          <p>{t("contact")}</p>
+        </UnderlineScrollLink>
         <LocaleSwitcher />
       </nav>
     </header>

@@ -63,5 +63,10 @@
       "message": "Message",
       "submit": "Send email"
     }
+  },
+  "header": {
+    "about": "About me",
+    "projects": "My work",
+    "contact": "Contact"
   }
 }

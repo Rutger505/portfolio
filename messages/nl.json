@@ -63,5 +63,10 @@
       "message": "Bericht",
       "submit": "Verstuur e-mail"
     }
+  },
+  "header": {
+    "about": "Over mij",
+    "projects": "Mijn werk",
+    "contact": "Contact"
   }
 }

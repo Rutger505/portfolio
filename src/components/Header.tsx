@@ -1,16 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import LanguageIcon from "./icons/LanguageIcon";
-import Link from "next/link";
 import ScrollLink from "@/components/ScrollLink";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 export default function Header() {
   const [activeSectionIndex, setActiveSectionIndex] = useState<number>(-1);
-
-  function changeLanguage() {
-    alert("Language change is not implemented yet");
-  }
 
   function handleLinkUnderline() {
     const sections = Array.from(document.querySelectorAll("section"));
@@ -88,23 +83,7 @@ export default function Header() {
             } block h-1 rounded-full bg-accent duration-300 ease-in-out`}
           ></span>
         </ScrollLink>
-        <Link
-          href={"/"}
-          className={
-            "text-header group cursor-pointer overflow-hidden text-xl text-textPrimary duration-300 group-hover:opacity-80"
-          }
-          onClick={changeLanguage}
-        >
-          <div className={"flex items-center"}>
-            <LanguageIcon className={" h-5 text-textPrimary"} />
-            <p className={"ml-2 "}>EN</p>
-          </div>
-          <span
-            className={
-              "block h-1 w-0 rounded-full bg-accent duration-300 ease-in-out group-hover:w-1/2"
-            }
-          ></span>
-        </Link>
+        <LocaleSwitcher />
       </nav>
     </header>
   );

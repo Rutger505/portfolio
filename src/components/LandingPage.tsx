@@ -1,8 +1,11 @@
 import React from "react";
 import ScrollLink from "@/components/ScrollLink";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
+import { useTranslations } from "next-intl";
 
 export default function LandingPage() {
+  const t = useTranslations("landingSection");
+
   return (
     <section
       id={"home"}
@@ -12,15 +15,18 @@ export default function LandingPage() {
 
       <div>
         <h2 className={"text-center text-4xl text-textPrimary"}>
-          &lt;/&gt; Software-dev
+          &lt;/&gt; {t("softwareDev")}
         </h2>
         <h1
           className={
             "mb-10 max-w-2xl text-center text-6xl font-bold text-textPrimary"
           }
         >
-          Hi, I&apos;m <span className={"text-accent"}>Rutger</span> from the
-          Netherlands
+          {t.rich("greeting", {
+            span: (children) => (
+              <span className={"text-accent"}>{children}</span>
+            ),
+          })}
         </h1>
       </div>
 

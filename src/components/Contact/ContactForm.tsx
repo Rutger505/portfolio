@@ -3,20 +3,32 @@
 import { FormEvent, useEffect, useState } from "react";
 import AnimatedButton from "@/components/AnimatedButton";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  translations: Translations;
+}
+
+interface Translations {
+  title: string;
+  name: string;
+  email: string;
+  message: string;
+  submit: string;
+}
+
+export default function ContactForm({
+  translations,
+}: Readonly<ContactFormProps>) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [emailValid, setEmailValid] = useState(true);
-  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const [nameUnfocused, setNameUnfocused] = useState(false);
   const [emailUnfocused, setEmailUnfocused] = useState(false);
-  const [subjectUnfocused, setSubjectUnfocused] = useState(false);
   const [messageUnfocused, setMessageUnfocused] = useState(false);
 
   function validateForm() {
-    return !!name && emailValid && !!subject && !!message;
+    return !!name && emailValid && !!message;
   }
 
   function validateEmail() {
@@ -33,9 +45,6 @@ export default function ContactForm() {
         break;
       case "email":
         setEmailUnfocused(true);
-        break;
-      case "subject":
-        setSubjectUnfocused(true);
         break;
       case "message":
         setMessageUnfocused(true);
@@ -55,7 +64,6 @@ export default function ContactForm() {
     if (!validateForm()) {
       setNameUnfocused(true);
       setEmailUnfocused(true);
-      setSubjectUnfocused(true);
       setMessageUnfocused(true);
       return;
     }
@@ -69,14 +77,14 @@ export default function ContactForm() {
       className="flex min-w-[80%] flex-col gap-y-6 rounded-md bg-secondary p-8 sm:min-w-[400px]"
       onSubmit={onSubmit}
     >
-      <h3 className="text-2xl text-textPrimary">Send me a message</h3>
+      <h3 className="text-2xl text-textPrimary">{translations.title}</h3>
       <input
         name="name"
         className={`${
           !name && nameUnfocused ? "outline-red" : "focus:outline-accent"
-        } w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none`}
+        } outline-n w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none outline-1`}
         type="text"
-        placeholder="Name"
+        placeholder={translations.name}
         value={name}
         onChange={(e) => setName(e.target.value)}
         onBlur={onInputBlur}
@@ -86,30 +94,19 @@ export default function ContactForm() {
         name="email"
         className={`${
           !emailValid && emailUnfocused ? "outline-red" : "focus:outline-accent"
-        } w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none`}
+        } w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none outline-1`}
         type="text"
-        placeholder="Email"
+        placeholder={translations.email}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        onBlur={onInputBlur}
-      />
-      <input
-        name="subject"
-        className={`${
-          !subject && subjectUnfocused ? "outline-red" : "focus:outline-accent"
-        } w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none`}
-        type="text"
-        placeholder="Subject"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
         onBlur={onInputBlur}
       />
       <textarea
         name="message"
         className={`${
           !message && messageUnfocused ? "outline-red" : "focus:outline-accent"
-        } min-h-[150px] w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none`}
-        placeholder="Message"
+        } min-h-[150px] w-full rounded-sm bg-primary px-3 py-2 text-textPrimary outline-none outline-1`}
+        placeholder={translations.message}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onBlur={onInputBlur}

@@ -28,7 +28,7 @@ export default function UnderlineScrollLink({
 
       return centerOfScreen >= sectionTop && centerOfScreen <= sectionBottom;
     });
-    const currentSection = sections[currentSectionIndex].id;
+    const currentSection = sections[currentSectionIndex]?.id;
 
     setActiveSection(currentSection);
   }
